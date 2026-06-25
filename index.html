@@ -3,127 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بوصلة المهندس | دليلك لاختيار تخصصك</title>
+    <title>رايح قسم إيه يا هندسة؟</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        
         body {
             font-family: 'Cairo', sans-serif;
-            background-color: #f0fdfa;
-        }
-        .gradient-bg {
-            background: linear-gradient(135deg, #0284c7, #2563eb);
+            background-color: #f8fafc;
+            /* خلفية بسيطة وهادية جداً */
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 20px 20px;
         }
         .option-btn {
             transition: all 0.2s ease;
         }
         .option-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
         }
         .selected {
-            border-color: #2563eb !important;
+            border-color: #3b82f6 !important;
             background-color: #eff6ff !important;
         }
         .custom-checkbox {
             transition: all 0.2s ease;
         }
         .selected .custom-checkbox {
-            background-color: #2563eb;
-            border-color: #2563eb;
+            background-color: #3b82f6;
+            border-color: #3b82f6;
         }
         .selected .custom-checkbox svg {
             opacity: 1;
         }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+        .app-card {
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            border: 1px solid #f1f5f9;
         }
     </style>
 </head>
-<body class="text-gray-800 min-h-screen flex flex-col bg-slate-50">
-
-    <!-- Header -->
-    <header class="gradient-bg text-white shadow-lg py-5">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <div>
-                <h1 class="text-3xl font-extrabold tracking-tight">بوصلة المهندس</h1>
-                <p class="text-sm mt-1 text-blue-100 font-medium">المرشد الذكي لطلاب إعدادي هندسة</p>
-            </div>
-            <div class="hidden sm:block">
-                <svg class="w-12 h-12 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-            </div>
-        </div>
-    </header>
+<body class="text-gray-800 min-h-screen flex flex-col justify-between">
 
     <!-- Main Content -->
-    <main class="flex-grow container mx-auto px-4 py-8 max-w-4xl flex flex-col justify-center">
+    <main class="flex-grow container mx-auto px-4 py-8 max-w-3xl flex flex-col justify-center">
         
         <!-- Welcome Screen -->
-        <div id="welcome-screen" class="glass-card rounded-2xl shadow-xl p-8 sm:p-12 border border-gray-100 animate-fade-in">
-            <div class="text-center mb-10">
-                <div class="inline-flex items-center justify-center w-24 h-24 rounded-full bg-blue-50 mb-6">
-                    <svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                </div>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-4">أهلاً بك في مرحلة تحديد المصير!</h2>
-                <p class="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto">
-                    اختيار القسم الهندسي هو أول خطوة في مسيرتك المهنية. هذا الاختبار مصمم ليحلل طريقة تفكيرك، شغفك، والمواد التي تفضلها ليقترح عليك الأقسام الأقرب لشخصيتك.
-                </p>
-                <div class="mt-6 inline-flex items-center bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
-                    <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
-                    يمكنك اختيار أكثر من إجابة في السؤال الواحد
-                </div>
+        <div id="welcome-screen" class="app-card p-6 sm:p-10 text-center animate-fade-in mt-4">
+            <div class="mb-6">
+                <span class="text-6xl">🎓</span>
+            </div>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-3">رايح قسم إيه يا هندسة؟ 🤔</h1>
+            <p class="text-gray-500 text-lg leading-relaxed mb-8">
+                الكويز ده معمول مخصوص عشان يخش جوه دماغك ويفهم شغفك، ويجيبلك من الآخر القسم اللي متفصل عليك وعلى شخصيتك.
+            </p>
+            
+            <div class="bg-blue-50 text-blue-700 px-4 py-3 rounded-xl text-sm font-semibold mb-8 inline-block border border-blue-100">
+                💡 معلومة ع الماشي: تقدر تختار أكتر من إجابة في السؤال الواحد لو حاسس إنك بتاع كله عادي.
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <!-- Normal Mode -->
-                <button onclick="startQuiz('normal')" class="group relative bg-white border-2 border-gray-200 hover:border-blue-500 rounded-2xl p-6 text-right transition-all duration-300 hover:shadow-lg flex flex-col">
-                    <div class="flex items-center justify-between mb-4">
-                        <div class="bg-blue-100 p-3 rounded-lg text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        </div>
-                        <span class="text-sm font-bold text-gray-400 bg-gray-100 px-3 py-1 rounded-full">50 سؤال</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">التقييم السريع</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-4">
-                        اختبار متوازن يغطي كافة الجوانب الهندسية وبيئة العمل. يمنحك نظرة عامة دقيقة في وقت قصير.
-                    </p>
-                    <div class="mt-auto text-blue-600 font-semibold flex items-center">
-                        ابدأ الاختبار <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-                    </div>
+                <button onclick="startQuiz('normal')" class="relative bg-white border-2 border-gray-200 hover:border-blue-500 rounded-2xl p-5 text-center transition-all duration-300 hover:shadow-md group">
+                    <div class="text-3xl mb-2 group-hover:scale-110 transition-transform">🚀</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">الخلاصة السريعة</h3>
+                    <p class="text-gray-400 text-xs">50 سؤال بيجيبوا من الآخر</p>
                 </button>
 
                 <!-- Advanced Mode -->
-                <button onclick="startQuiz('advanced')" class="group relative bg-slate-800 border-2 border-slate-800 hover:bg-slate-900 rounded-2xl p-6 text-right transition-all duration-300 hover:shadow-xl flex flex-col">
-                    <div class="absolute top-0 right-0 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-xl">الأكثر دقة</div>
-                    <div class="flex items-center justify-between mb-4">
-                        <div class="bg-slate-700 p-3 rounded-lg text-yellow-400 group-hover:scale-110 transition-transform">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4V3a1 1 0 00-1-1H7a1 1 0 00-1 1v1.586a2 2 0 01-.586 1.414l-1.586 1.586a2 2 0 000 2.828l1.414 1.414a2 2 0 01.586 1.414V19a1 1 0 001 1h2a1 1 0 001-1v-7z"></path></svg>
-                        </div>
-                        <span class="text-sm font-bold text-slate-300 bg-slate-700 px-3 py-1 rounded-full">100 سؤال</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-2">التقييم الشامل</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                        يتعمق في تفاصيل المواد العلمية، التخصصات الدقيقة، والتفضيلات المعقدة لضمان نتيجة نهائية لا تقبل الشك.
-                    </p>
-                    <div class="mt-auto text-yellow-400 font-semibold flex items-center">
-                        ابدأ الاختبار الشامل <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-                    </div>
+                <button onclick="startQuiz('advanced')" class="relative bg-blue-600 border-2 border-blue-600 hover:bg-blue-700 rounded-2xl p-5 text-center transition-all duration-300 shadow-md group">
+                    <div class="absolute -top-3 -right-3 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full shadow-sm transform rotate-12">الأدق 🔥</div>
+                    <div class="text-3xl mb-2 group-hover:scale-110 transition-transform">🧠</div>
+                    <h3 class="text-xl font-bold text-white mb-1">فصصني براحتك</h3>
+                    <p class="text-blue-200 text-xs">100 سؤال عشان نقطع الشك باليقين</p>
                 </button>
             </div>
         </div>
 
         <!-- Quiz Screen -->
-        <div id="quiz-screen" class="hidden flex-col glass-card rounded-2xl shadow-xl p-6 sm:p-10 border border-gray-100">
+        <div id="quiz-screen" class="hidden flex-col app-card p-6 sm:p-10 mt-4">
             <!-- Progress -->
             <div class="mb-8">
-                <div class="flex justify-between text-sm font-bold text-gray-500 mb-3">
-                    <span id="question-counter" class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">سؤال 1 / 100</span>
-                    <span id="progress-text" class="text-blue-600">1%</span>
+                <div class="flex justify-between text-sm font-bold text-gray-500 mb-2">
+                    <span id="question-counter" class="bg-gray-100 px-3 py-1 rounded-lg">سؤال 1 / 100</span>
+                    <span id="progress-text" class="text-blue-500">1%</span>
                 </div>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
-                    <div id="progress-bar" class="bg-blue-600 h-2.5 rounded-full transition-all duration-500 ease-out" style="width: 1%"></div>
+                <div class="w-full bg-gray-100 rounded-full h-2">
+                    <div id="progress-bar" class="bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out" style="width: 1%"></div>
                 </div>
             </div>
 
@@ -135,45 +101,37 @@
             </div>
 
             <!-- Options -->
-            <div id="options-container" class="space-y-3 mb-10 flex-grow">
+            <div id="options-container" class="space-y-3 mb-8 flex-grow">
                 <!-- Options injected here via JS -->
             </div>
 
             <!-- Navigation -->
-            <div class="flex justify-between items-center border-t border-gray-100 pt-6">
-                <button onclick="prevQuestion()" id="prev-btn" class="px-6 py-3 bg-white border border-gray-300 rounded-xl text-gray-600 font-bold hover:bg-gray-50 hover:text-blue-600 transition-all hidden flex items-center shadow-sm">
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> السابق
+            <div class="flex justify-between items-center border-t border-gray-100 pt-6 mt-auto">
+                <button onclick="prevQuestion()" id="prev-btn" class="px-5 py-3 bg-white border border-gray-200 rounded-xl text-gray-500 font-bold hover:bg-gray-50 transition-all hidden">
+                    رجعني خطوة
                 </button>
-                <button onclick="nextQuestion()" id="next-btn" class="px-10 py-3 bg-gray-300 text-gray-500 rounded-xl font-bold cursor-not-allowed mr-auto transition-all flex items-center shadow-sm" disabled>
-                    التالي <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <button onclick="nextQuestion()" id="next-btn" class="px-8 py-3 bg-gray-200 text-gray-400 rounded-xl font-bold cursor-not-allowed mr-auto transition-all" disabled>
+                    خش ع اللي بعده
                 </button>
             </div>
         </div>
 
         <!-- Result Screen -->
-        <div id="result-screen" class="hidden glass-card rounded-2xl shadow-xl p-6 sm:p-10 border border-gray-100">
-            <div class="text-center mb-10">
-                <div class="inline-flex items-center justify-center w-20 h-20 bg-green-100 text-green-600 rounded-full mb-4 shadow-inner">
-                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                </div>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-3">ملفك الهندسي جاهز!</h2>
-                <p class="text-gray-600 text-lg">بناءً على تحليلات إجاباتك، قمنا بترتيب الأقسام الأنسب لشخصيتك:</p>
+        <div id="result-screen" class="hidden app-card p-6 sm:p-10 mt-4">
+            <div class="text-center mb-8">
+                <div class="text-6xl mb-4">🎯</div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-2">النتيجة طلعت يا بطل!</h2>
+                <p class="text-gray-500">بناءً على دماغك وإجاباتك، دي أكتر أقسام لايقة عليك:</p>
             </div>
 
-            <!-- رسالة التوكل والاستخارة -->
-            <div class="mb-8 p-5 bg-blue-50 border-r-4 border-blue-500 rounded-l-xl">
-                <div class="flex">
-                    <div class="flex-shrink-0">
-                        <svg class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <div class="mr-3">
-                        <h3 class="text-sm font-bold text-blue-800">رسالة هامة:</h3>
-                        <p class="text-sm text-blue-700 mt-1 leading-relaxed">
-                            هذا التقييم مبني على إجاباتك وتحليل لطبيعة الأقسام الهندسية، وهو مجرد "سعي وأخذ بالأسباب". لكن التوفيق والخير الحقيقي يعلمه الله وحده. <strong>لا تنسَ صلاة الاستخارة، واسأل الله أن ييسر لك الخير حيث كان، ثم توكل عليه وابدأ مسيرتك بثقة.</strong>
-                        </p>
-                    </div>
+            <!-- رسالة التوكل والاستخارة (أخوك الكبير) -->
+            <div class="mb-8 p-5 bg-blue-50 rounded-2xl border border-blue-100 relative overflow-hidden">
+                <div class="absolute -right-4 -top-4 opacity-10 text-8xl">🤲</div>
+                <div class="relative z-10">
+                    <h3 class="text-lg font-bold text-blue-800 mb-1">نصيحة أخوية 💙</h3>
+                    <p class="text-sm text-blue-700 leading-relaxed">
+                        التقييم ده مجرد سعي وبناخد بالأسباب عشان نفهم نفسنا أكتر، لكن الخير فين؟ دي بتاعة ربنا سبحانه وتعالى. <strong>متنساش تصلي استخارة</strong> وتسيبها على الله، وتوكل وابدأ طريقك بقلب جامد.
+                    </p>
                 </div>
             </div>
 
@@ -181,9 +139,9 @@
                 <!-- Results injected here via JS -->
             </div>
 
-            <div class="mt-12 text-center border-t border-gray-100 pt-8">
-                <button onclick="location.reload()" class="bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-xl transition duration-300 shadow-sm flex items-center mx-auto">
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg> إعادة الاختبار
+            <div class="mt-10 text-center border-t border-gray-100 pt-6">
+                <button onclick="location.reload()" class="bg-white border-2 border-gray-200 text-gray-600 hover:bg-gray-50 font-bold py-3 px-8 rounded-xl transition duration-300">
+                    عايز أجرب تاني 🔄
                 </button>
             </div>
         </div>
@@ -191,127 +149,127 @@
     </main>
 
     <!-- Footer -->
-    <footer class="text-center py-8 text-gray-500 font-medium text-sm">
-        <p>تم التصميم بحب لطلاب إعدادي هندسة</p>
+    <footer class="text-center py-6 text-gray-400 text-xs sm:text-sm">
+        <p>تم الانشاء بواسطه مروان المغازي وجيمياي (مش طايقه 😑)</p>
     </footer>
 
     <script>
         const depts = {
-            civil: { id: 'civil', name: 'هندسة مدنية', color: 'bg-orange-500', border: 'border-orange-500', icon: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4' },
-            arch: { id: 'arch', name: 'هندسة معمارية', color: 'bg-purple-500', border: 'border-purple-500', icon: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6' },
-            mech: { id: 'mech', name: 'هندسة ميكانيكية', color: 'bg-red-500', border: 'border-red-500', icon: 'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z' },
-            power: { id: 'power', name: 'هندسة كهربائية (قوى)', color: 'bg-yellow-500', border: 'border-yellow-500', icon: 'M13 10V3L4 14h7v7l9-11h-7z' },
-            telecom: { id: 'telecom', name: 'هندسة اتصالات', color: 'bg-blue-500', border: 'border-blue-500', icon: 'M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0' },
-            cs: { id: 'cs', name: 'حاسبات ونظم تحكم', color: 'bg-indigo-500', border: 'border-indigo-500', icon: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4' },
-            textile: { id: 'textile', name: 'غزل ونسيج', color: 'bg-teal-500', border: 'border-teal-500', icon: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z' }
+            civil: { id: 'civil', name: 'هندسة مدنية', color: 'bg-orange-500', border: 'border-orange-500', emoji: '🏗️' },
+            arch: { id: 'arch', name: 'هندسة معمارية', color: 'bg-purple-500', border: 'border-purple-500', emoji: '📐' },
+            mech: { id: 'mech', name: 'هندسة ميكانيكية', color: 'bg-red-500', border: 'border-red-500', emoji: '⚙️' },
+            power: { id: 'power', name: 'هندسة كهرباء (قوى)', color: 'bg-yellow-500', border: 'border-yellow-500', emoji: '⚡' },
+            telecom: { id: 'telecom', name: 'هندسة اتصالات', color: 'bg-blue-500', border: 'border-blue-500', emoji: '📡' },
+            cs: { id: 'cs', name: 'حاسبات ونظم تحكم', color: 'bg-indigo-500', border: 'border-indigo-500', emoji: '💻' },
+            textile: { id: 'textile', name: 'غزل ونسيج', color: 'bg-teal-500', border: 'border-teal-500', emoji: '🧵' }
         };
 
         let userScores = { civil: 0, arch: 0, mech: 0, power: 0, telecom: 0, cs: 0, textile: 0 };
 
-        // 100 Hardcoded Questions
+        // 100 Hardcoded Questions (بلمسة مصرية خفيفة)
         const allQuestions = [
-            // --- 1 to 50: Normal Mode Questions (General & Foundations) ---
-            { q: "عندما تنظر إلى مدينة حديثة، ما أكثر شيء يلفت انتباهك ويثير فضولك؟", options: [ { t: "تصميم المباني، الواجهات، وتناسق الألوان.", scores: { arch: 3 } }, { t: "الكباري، تخطيط الطرق، والبنية التحتية.", scores: { civil: 3 } }, { t: "تغطية شبكات المحمول والأبراج اللاسلكية.", scores: { telecom: 3 } }, { t: "إضاءة المدينة، محطات الكهرباء والمحولات.", scores: { power: 3 } } ] },
-            { q: "ما هي المادة التي كنت تجد فيها متعة أو تفوقاً في إعدادي هندسة؟", options: [ { t: "الرسم الهندسي واستنتاج المساقط.", scores: { arch: 3, mech: 2 } }, { t: "الميكانيكا (استاتيكا وديناميكا).", scores: { civil: 2, mech: 3 } }, { t: "الرياضيات، البرمجة، والمنطق.", scores: { cs: 3, telecom: 2 } }, { t: "الفيزياء، الكيمياء، وخواص المواد.", scores: { power: 2, textile: 3, civil: 1 } } ] },
-            { q: "إذا كنت ستعمل في مشروع ضخم، ما هو الدور المفضل لك؟", options: [ { t: "إدارة وتوجيه العمال والفنيين في الموقع.", scores: { civil: 3, power: 2 } }, { t: "تصميم الفكرة ورسمها على برامج التصميم في المكتب.", scores: { arch: 3, mech: 1 } }, { t: "برمجة الأنظمة وحل المشكلات المعقدة بالخوارزميات.", scores: { cs: 3, telecom: 1 } }, { t: "النزول للمصنع والإشراف على الماكينات وخطوط الإنتاج.", scores: { mech: 3, textile: 2 } } ] },
-            { q: "كيف تتعامل مع فكرة التطور التكنولوجي المستمر؟", options: [ { t: "أحب تعلم لغات وأدوات جديدة باستمرار (التغيير السريع).", scores: { cs: 3 } }, { t: "أفضل التطور على مراحل (أجيال شبكات جديدة، معدات حديثة).", scores: { telecom: 3, power: 2, mech: 1 } }, { t: "أفضل الاعتماد على المبادئ الهندسية الثابتة التي لا تتغير كثيراً.", scores: { civil: 3, arch: 2, textile: 2 } } ] },
-            { q: "ما هو المنتج النهائي الذي تفضل أن تعمل عليه؟", options: [ { t: "تطبيق موبايل، موقع ويب، أو نظام ذكاء اصطناعي.", scores: { cs: 3 } }, { t: "سيارة، طائرة، أو ماكينة تصنيع.", scores: { mech: 3 } }, { t: "مستشفى، سد مائي، أو ناطحة سحاب.", scores: { civil: 3, arch: 2 } }, { t: "شبكة تغذية كهربائية أو لوحات تحكم صناعية.", scores: { power: 3, telecom: 1 } } ] },
-            { q: "كيف تفضل حل المشاكل الهندسية المعقدة؟", options: [ { t: "أرسم الفكرة (سكيتش) وأتخيل أبعادها في الفراغ.", scores: { arch: 3 } }, { t: "أقوم بحسابات القوى والأحمال باستخدام المعادلات.", scores: { civil: 3, mech: 2 } }, { t: "أتتبع مسار التيار أو الإشارة في دائرة كهربائية/إلكترونية.", scores: { power: 2, telecom: 3 } }, { t: "أكتب كوداً وأقوم بعمل اختبار (Testing) للعثور على الخطأ.", scores: { cs: 3 } } ] },
-            { q: "هل تستهويك فكرة العمل اليدوي أو تفكيك وتركيب الأجهزة؟", options: [ { t: "نعم، أحب استخدام الأدوات اليدوية وإصلاح الميكانيكا.", scores: { mech: 3 } }, { t: "أحب تفكيك الأجهزة الكهربائية وتوصيل الأسلاك.", scores: { power: 3, telecom: 1 } }, { t: "لا، أدواتي الأساسية هي الكيبورد، الماوس، وبرامج الكمبيوتر.", scores: { cs: 3, arch: 2 } } ] },
-            { q: "أي من هذه المواضيع يثير شغفك عند القراءة عنه؟", options: [ { t: "الذكاء الاصطناعي، أمن المعلومات، وقواعد البيانات.", scores: { cs: 3 } }, { t: "الطاقة المتجددة (شمسية/رياح) والسيارات الكهربائية.", scores: { power: 3, mech: 1 } }, { t: "الروبوتات، المحركات، وعلم الديناميكا الهوائية.", scores: { mech: 3 } }, { t: "المدن الذكية، العمارة الخضراء، وتاريخ الفن الهندسي.", scores: { arch: 3, civil: 1 } } ] },
-            { q: "لو طلب منك التواجد في مصنع للغزل والنسيج، ما هو القسم الذي سيجذب انتباهك؟", options: [ { t: "كيمياء الأصباغ ومعالجة الألياف.", scores: { textile: 3 } }, { t: "حركة التروس وصيانة الماكينات.", scores: { mech: 3 } }, { t: "لوحات التحكم الآلي (PLC) والمحركات.", scores: { power: 3 } }, { t: "السيرفرات والشبكة التي تدير المصنع.", scores: { cs: 3, telecom: 1 } } ] },
-            { q: "ما رأيك في التعامل مع الرياضيات البحتة (تفاضل، تكامل، معادلات تفاضلية)؟", options: [ { t: "ممتاز فيها، وأحب استخدامها لتحليل الإشارات والموجات.", scores: { telecom: 3, power: 1 } }, { t: "أفضل الرياضيات المتقطعة (Discrete Math) والمنطق.", scores: { cs: 3 } }, { t: "أستخدمها كأداة لحساب القوى وعزوم الانحناء فقط.", scores: { civil: 3, mech: 2 } }, { t: "لا أحبها، أفضل الجانب البصري والنسب الجمالية.", scores: { arch: 3 } } ] },
-            { q: "كيف تتعامل مع فكرة العمل الميداني (في موقع أو مصنع)؟", options: [ { t: "أستمتع به ولا أمانع التعرض للشمس أو التراب.", scores: { civil: 3, mech: 2 } }, { t: "أقبله إذا كان جزءاً من وظيفتي، لكن أفضل المكتب.", scores: { power: 2, telecom: 2 } }, { t: "لا أفضله إطلاقاً، عملي يجب أن يكون مكتبياً.", scores: { cs: 3, arch: 2 } } ] },
-            { q: "عند شراء جهاز إلكتروني جديد (لابتوب أو هاتف)، ما الذي تبحث عنه أولاً؟", options: [ { t: "قوة المعالج (Processor) وحجم الذاكرة وسرعة الأداء.", scores: { cs: 3, telecom: 2 } }, { t: "جودة الشاشة ودقة الألوان لاستخدامه في التصميم.", scores: { arch: 3 } }, { t: "سعة البطارية وقدرة تحمل الجهاز للصدمات.", scores: { power: 2, mech: 2 } } ] },
-            { q: "هل تحب فكرة تصميم نظام يعمل من تلقاء نفسه (Automation)؟", options: [ { t: "نعم، كتابة كود يجعل النظام يفكر ويتخذ قرارات.", scores: { cs: 3 } }, { t: "نعم، باستخدام المتحكمات (PLC) والحساسات للمصانع.", scores: { power: 3, mech: 2 } }, { t: "نعم، تصميم دوائر إلكترونية دقيقة تنفذ أوامر محددة.", scores: { telecom: 3 } }, { t: "لا يستهويني التحكم الآلي، أفضل التصميم الإنشائي أو المعماري.", scores: { civil: 3, arch: 2 } } ] },
-            { q: "ما مدى اهتمامك بالديناميكا الحرارية وانتقال الحرارة (Thermodynamics)؟", options: [ { t: "موضوع شيق جداً، خاصة في تصميم المحركات والتكييف.", scores: { mech: 3 } }, { t: "مهم بالنسبة لي من حيث حسابات العزل في المباني.", scores: { arch: 2, civil: 1 } }, { t: "أهتم به فقط لتبريد السيرفرات أو اللوحات الإلكترونية.", scores: { cs: 1, telecom: 1, power: 1 } }, { t: "غير مهتم به على الإطلاق.", scores: { textile: 1 } } ] },
-            { q: "إذا كنت تلعب لعبة فيديو استراتيجية (مثل بناء المدن)، ما الذي تركز عليه؟", options: [ { t: "تخطيط الشوارع وتوزيع المباني بشكل جمالي ومنظم.", scores: { arch: 3, civil: 1 } }, { t: "إدارة الموارد، استخراج المعادن، وبناء المصانع.", scores: { mech: 3, power: 2 } }, { t: "البنية التحتية والمرافق (الماء، الكهرباء، الطرق).", scores: { civil: 3, power: 2 } }, { t: "المنطق والسرعة في إنهاء اللعبة أو حتى التعديل عليها (Modding).", scores: { cs: 3 } } ] },
-            { q: "هل تجد متعة في التعامل مع برامج التصميم الهندسي مثل AutoCAD أو SolidWorks؟", options: [ { t: "نعم، أقضي عليها ساعات دون ملل.", scores: { arch: 3, mech: 3, civil: 2 } }, { t: "أستخدمها عند الحاجة لإخراج رسومات تنفيذية.", scores: { power: 2, telecom: 1 } }, { t: "لا أطيقها، أفضل واجهات كتابة الأكواد (IDEs).", scores: { cs: 3 } } ] },
-            { q: "ما رأيك في مجال هندسة المرور وتصميم المطارات؟", options: [ { t: "مجال قوي يعتمد على التخطيط الاستراتيجي والمساحات.", scores: { civil: 3 } }, { t: "يهمني من ناحية تصميم أبراج المراقبة والاتصالات.", scores: { telecom: 3 } }, { t: "لا يستهويني هذا النوع من التخطيط.", scores: { cs: 1, mech: 1 } } ] },
-            { q: "إلى أي مدى يهمك الدخل المادي (الراتب) مقابل الاستقرار الوظيفي؟", options: [ { t: "أبحث عن الدخل العالي جداً حتى لو كانت المنافسة شرسة والمخاطرة عالية.", scores: { cs: 3, arch: 1 } }, { t: "أبحث عن الأمان الوظيفي التام (وظيفة حكومية أو في مصنع ثابت).", scores: { power: 3, civil: 2, textile: 2 } }, { t: "مزيج بين الاثنين، دخل جيد مع استقرار معقول.", scores: { telecom: 3, mech: 2 } } ] },
-            { q: "هل تستهويك الكيمياء وتفاعلات المواد (Polymer & Chemical Processes)؟", options: [ { t: "نعم، دراسة خصائص المواد والأصباغ وتصنيعها أمر ممتع.", scores: { textile: 3 } }, { t: "نعم، من أجل فهم خلطات الخرسانة أو الإسفلت.", scores: { civil: 2 } }, { t: "لا، أبتعد عن الكيمياء قدر الإمكان.", scores: { cs: 3, telecom: 2, arch: 2 } } ] },
-            { q: "إذا كنت ستبدأ مشروعك الخاص (Start-up)، ماذا سيكون؟", options: [ { t: "تطبيق للهواتف أو منصة إلكترونية لتقديم خدمات.", scores: { cs: 3 } }, { t: "شركة مقاولات أو مكتب تصميم استشاري.", scores: { civil: 3, arch: 3 } }, { t: "ورشة تصنيع ذكية أو مصنع لإنتاج قطع الغيار.", scores: { mech: 3, power: 2 } }, { t: "شركة لتركيب أنظمة الشبكات أو الطاقة الشمسية.", scores: { telecom: 3, power: 3 } } ] },
-            { q: "كيف تتعامل مع الضغط (Deadline) وتسليم المشاريع؟", options: [ { t: "أستطيع السهر لأيام لإنهاء ماكيت أو تصميم معماري.", scores: { arch: 3, cs: 1 } }, { t: "أفضل العمل المنظم لتسليم الحسابات الإنشائية في وقتها.", scores: { civil: 3, mech: 2 } }, { t: "أعمل بشكل أفضل تحت ضغط الكود (Sprints & Agile).", scores: { cs: 3 } }, { t: "أفضل البيئة المستقرة التي لا تعتمد على تسليمات مفاجئة.", scores: { power: 3, telecom: 2, textile: 2 } } ] },
-            { q: "ما رأيك في علم الـ (Cybersecurity) وأمن المعلومات؟", options: [ { t: "مجال مثير، أود تعلم كيفية حماية الأنظمة واكتشاف الثغرات.", scores: { cs: 3 } }, { t: "مهم من ناحية تأمين شبكات الاتصالات وتشفير البيانات.", scores: { telecom: 3 } }, { t: "ليس له علاقة باهتماماتي الهندسية.", scores: { civil: 2, mech: 2, arch: 2 } } ] },
-            { q: "عند إصلاح عطل في جهاز، هل تفضل أن تفهم (كيف حدث) أم (كيف نمنعه)؟", options: [ { t: "كيف حدث برمجياً لأصلح الكود (Debugging).", scores: { cs: 3 } }, { t: "كيف نمنع احتراق الدائرة الكهربائية مرة أخرى.", scores: { power: 3, telecom: 2 } }, { t: "كيف نمنع تآكل أو كسر هذا الجزء الميكانيكي.", scores: { mech: 3, civil: 1 } } ] },
-            { q: "هل تجد متعة في دراسة علم الإحصاء والاحتمالات (Statistics & Probability)؟", options: [ { t: "نعم، فهو أساس الذكاء الاصطناعي وتحليل البيانات.", scores: { cs: 3 } }, { t: "نعم، يستخدم في تحليل الإشارات والاتصالات الرقمية.", scores: { telecom: 3 } }, { t: "لا أفضله، أهتم بالحسابات القطعية وليس الاحتمالات.", scores: { civil: 2, arch: 2, power: 1 } } ] },
-            { q: "ما رأيك في تصميم واجهات المستخدم (UI/UX) والتجربة البصرية؟", options: [ { t: "ممتع جداً، أحب تصميم واجهات التطبيقات والمواقع.", scores: { cs: 3, arch: 1 } }, { t: "أفضل التصميم الجمالي للمباني والمساحات الداخلية.", scores: { arch: 3 } }, { t: "لا أهتم بالشكل الجمالي، تهمني كفاءة وعمل النظام.", scores: { power: 3, mech: 3, civil: 2 } } ] },
-            { q: "هل تحب فكرة السفر للخارج للعمل (الخليج أو أوروبا)؟", options: [ { t: "نعم، وأفضل الدول الأوروبية في مجالات التكنولوجيا.", scores: { cs: 3, telecom: 2 } }, { t: "نعم، وأفضل دول الخليج في مجالات البناء والمقاولات.", scores: { civil: 3, arch: 2, power: 2 } }, { t: "أفضل العمل من المنزل (Remote) لشركات أجنبية.", scores: { cs: 3, arch: 1 } }, { t: "أفضل الاستقرار في مصر والعمل في المصانع أو المحطات.", scores: { textile: 3, mech: 2, power: 1 } } ] },
-            { q: "كيف ترى الهندسة المدنية كمهنة؟", options: [ { t: "مهنة العظماء، تبني حضارات وتترك أثراً ملموساً.", scores: { civil: 3 } }, { t: "مجال تقليدي متشبع لا يواكب سرعة التكنولوجيا.", scores: { cs: 2, telecom: 2 } }, { t: "مهنة جيدة لكنها تعتمد على المجهود البدني والوقوف في الشمس.", scores: { arch: 2, power: 1 } } ] },
-            { q: "ما مدى اهتمامك بمعرفة كيفية عمل الألياف الضوئية (Fiber Optics)؟", options: [ { t: "مهتم جداً بتكنولوجيا نقل البيانات والإنترنت السريع.", scores: { telecom: 3 } }, { t: "أهتم بها من حيث تأثيرها على سرعة السيرفرات.", scores: { cs: 2 } }, { t: "غير مهتم بكيفية عملها.", scores: { civil: 2, mech: 2 } } ] },
-            { q: "إذا خيروك بين دراسة مادة (الخرسانة المسلحة) أو (هياكل البيانات Data Structures)؟", options: [ { t: "الخرسانة المسلحة بالتأكيد.", scores: { civil: 3, arch: 1 } }, { t: "هياكل البيانات والخوارزميات.", scores: { cs: 3 } }, { t: "لا هذا ولا ذاك، أفضل دراسة المحركات أو الدوائر.", scores: { mech: 2, power: 2, telecom: 2 } } ] },
-            { q: "هل تحب فكرة التفاوض مع العملاء أو الموردين؟", options: [ { t: "نعم، كجزء من إدارة المشروعات الهندسية والمقاولات.", scores: { civil: 3, arch: 2 } }, { t: "أفضل التعامل مع الأجهزة أو الأكواد بدلاً من البشر.", scores: { cs: 3, telecom: 2, mech: 1 } } ] },
-            { q: "ما رأيك في تكنولوجيا الروبوتات (Robotics)؟", options: [ { t: "أهتم بالذكاء الذي يحركها (البرمجة).", scores: { cs: 3 } }, { t: "أهتم بحركة المفاصل والمواتير وتصميمها.", scores: { mech: 3 } }, { t: "أهتم بأنظمة التحكم التي تربط بين الكود والموتور.", scores: { telecom: 3, power: 3 } } ] },
-            { q: "إلى أي مدى تهتم بالتفاصيل الدقيقة (Pixels في شاشة أو ملليمتر في تصميم)؟", options: [ { t: "جداً، التفاصيل الصغيرة تصنع الفرق في التصميم.", scores: { arch: 3, cs: 3 } }, { t: "أهتم بالصورة الكبيرة (الماكرو) والمشروع ككل كالمبنى.", scores: { civil: 3, power: 2 } } ] },
-            { q: "ما هو انطباعك عن العمل كـ (مهندس مقاولات MEP)؟", options: [ { t: "مسار مهني رائع يدر عائداً كبيراً.", scores: { power: 3, mech: 3, civil: 2 } }, { t: "لا أرى نفسي في قطاع المقاولات إطلاقاً.", scores: { cs: 3, telecom: 2, textile: 2 } } ] },
-            { q: "إذا واجهت تكنولوجيا لم تدرسها في الكلية:", options: [ { t: "أبحث على جوجل وأشاهد فيديوهات لأتعلمها بنفسي (Self-study).", scores: { cs: 3, telecom: 2 } }, { t: "أشعر بالانزعاج وأفضل الاعتماد على ما درسته أكاديمياً.", scores: { civil: 2, power: 1, textile: 1 } } ] },
-            { q: "تخيل أنك تعمل في شركة (سيارات)، ماذا ستختار؟", options: [ { t: "تصميم انسيابية وشكل السيارة من الخارج.", scores: { arch: 3 } }, { t: "تصميم المحرك، ناقل الحركة، ونظام التعليق.", scores: { mech: 3 } }, { t: "برمجة شاشة الـ GPS ونظام الترفيه.", scores: { cs: 3 } }, { t: "تطوير رادارات الحساسات وتفادي التصادم.", scores: { telecom: 3, power: 1 } } ] },
-            { q: "هل شخصيتك قيادية وتستطيع فرض رأيك على الفنيين الأكبر منك سناً؟", options: [ { t: "نعم، أستطيع إدارة الموقع بحزم وثقة.", scores: { civil: 3, power: 2, mech: 2 } }, { t: "لا أهتم بالقيادة، أفضل تنفيذ مهامي التقنية بسلام.", scores: { cs: 3, arch: 2, telecom: 2 } } ] },
-            { q: "في مصنع نسيج كبير، ستتجه أولاً إلى:", options: [ { t: "غرفة التحكم والسيرفرات.", scores: { cs: 3, telecom: 2 } }, { t: "لوحات الكهرباء والمحولات الرئيسية.", scores: { power: 3 } }, { t: "تجميع خطوط الإنتاج الميكانيكية.", scores: { mech: 3 } }, { t: "تكنولوجيا خلط الخيوط والألوان وكيمياء الأصباغ.", scores: { textile: 3 } } ] },
-            { q: "هل تستهويك دراسة الصوتيات (Acoustics) والعزل الهندسي؟", options: [ { t: "نعم، من أجل تصميم مسارح أو استوديوهات أو مباني هادئة.", scores: { arch: 3, civil: 1 } }, { t: "نعم، من منظور معالجة الإشارات الصوتية رقمياً.", scores: { telecom: 3, cs: 1 } }, { t: "لا أهتم بالصوتيات.", scores: { mech: 1, power: 1 } } ] },
-            { q: "ما رأيك في علم (المساحة) واستخدام أجهزة مثل الـ Total Station؟", options: [ { t: "مجال ممتع وأساسي لتخطيط الأراضي والطرق.", scores: { civil: 3 } }, { t: "ممل ويعتمد على الوقوف في الشارع طويلاً.", scores: { cs: 2, telecom: 2, arch: 1 } } ] },
-            { q: "هل تحب دراسة سلوك السوائل والغازات (Fluid Mechanics)؟", options: [ { t: "جداً، لفهم المضخات، التوربينات، وتصميم الطائرات.", scores: { mech: 3 } }, { t: "نعم، لتصميم شبكات المياه والصرف الصحي.", scores: { civil: 3 } }, { t: "غير مهتم بحركة الموائع.", scores: { cs: 2, telecom: 2, power: 1 } } ] },
-            { q: "أي من هذه المسميات الوظيفية يجذبك أكثر؟", options: [ { t: "Software Engineer / Data Scientist", scores: { cs: 3 } }, { t: "Structural Engineer / Project Manager", scores: { civil: 3 } }, { t: "Control Systems Engineer / Embedded Developer", scores: { telecom: 3, power: 2 } }, { t: "Maintenance Engineer / Production Manager", scores: { mech: 3, textile: 2 } } ] },
-            { q: "كيف ترى الهندسة المعمارية؟", options: [ { t: "فن راقٍ يحتاج لموهبة وحس إبداعي عالي.", scores: { arch: 3 } }, { t: "مجرد رسم واجهات، والعمل الحقيقي للمهندس المدني.", scores: { civil: 3, mech: 1 } }, { t: "مجال بعيد تماماً عن التفكير المنطقي والخوارزمي.", scores: { cs: 2, telecom: 2 } } ] },
-            { q: "ما مدى تقبلك للعمل في تخصص (نيش Niche) أو مجال ضيق جداً؟", options: [ { t: "أفضل ذلك، لتكون المنافسة قليلة وأصبح خبيراً نادراً.", scores: { textile: 3, telecom: 2 } }, { t: "أرفض ذلك، أريد مجالاً واسعاً يتيح لي تغيير مساري.", scores: { cs: 3, civil: 2, mech: 1 } } ] },
-            { q: "عند استخدام الذكاء الاصطناعي لتوليد الصور أو التصميمات:", options: [ { t: "أهتم بكيفية عمل الموديل الرياضي (Neural Networks) خلفه.", scores: { cs: 3 } }, { t: "أستخدمه كأداة مساعدة لاستلهام أفكار تصميمية للمباني.", scores: { arch: 3 } }, { t: "لا أعتمد عليه في الحسابات الهندسية الدقيقة.", scores: { civil: 3, power: 2 } } ] },
-            { q: "إذا تعطل مشروعك بسبب خطأ غير معروف:", options: [ { t: "أشعر بالحماس لاكتشاف الخطأ (Debugging).", scores: { cs: 3, telecom: 2 } }, { t: "أشعر بالإحباط الشديد وأحتاج وقتاً للعودة للعمل.", scores: { arch: 2, civil: 1 } } ] },
-            { q: "ما رأيك في تصميم شبكات إطفاء الحريق (Firefighting)؟", options: [ { t: "مجال ميكانيكي/مدني ممتاز ومطلوب في كل مبنى.", scores: { mech: 3, civil: 2 } }, { t: "يهمني فيه فقط تصميم إنذار الحريق الكهربائي (Fire Alarm).", scores: { power: 3, telecom: 1 } }, { t: "لا يستهويني.", scores: { cs: 2, textile: 1 } } ] },
-            { q: "هل تمتلك مهارة الشرح وتبسيط المعلومات التقنية للآخرين؟", options: [ { t: "نعم، وأحب العمل كمدرب أو استشاري فني.", scores: { cs: 2, telecom: 2, civil: 2 } }, { t: "لا، أفضل العمل في صمت دون احتكاك كثير بالناس.", scores: { arch: 2, mech: 2, power: 1 } } ] },
-            { q: "كيف ترى قسم الغزل والنسيج؟", options: [ { t: "صناعة استراتيجية ولها مستقبل إذا تم تطويرها.", scores: { textile: 3 } }, { t: "قسم لا أفهم طبيعته ولا أرغب بدخوله.", scores: { cs: 2, civil: 2, arch: 2 } } ] },
-            { q: "في رأيك، ما هو عصب التطور التكنولوجي الحالي؟", options: [ { t: "أشباه الموصلات (Semiconductors) والرقائق الإلكترونية.", scores: { telecom: 3, cs: 1 } }, { t: "البرمجيات وقواعد البيانات السحابية (Cloud).", scores: { cs: 3 } }, { t: "توليد الطاقة وتخزينها (البطاريات).", scores: { power: 3 } } ] },
-            { q: "أخيراً، عند اختيارك للقسم، هل ستعتمد على:", options: [ { t: "الشغف فقط، حتى لو كان سوق العمل صعباً.", scores: { arch: 3, textile: 2 } }, { t: "سوق العمل وفرص السفر المضمونة.", scores: { civil: 3, power: 2 } }, { t: "التطور المستقبلي ومرونة العمل (Remote).", scores: { cs: 3, telecom: 2 } } ] },
+            // --- 1 to 50: Normal Mode ---
+            { q: "لما بتمشي في مدينة أو مكان جديد، إيه أكتر حاجة بتخطف عينك؟", options: [ { t: "شكل العمارات وتصميم الواجهات وتناسق الألوان.", scores: { arch: 3 } }, { t: "الكباري وتخطيط الشوارع والبنية التحتية.", scores: { civil: 3 } }, { t: "تغطية الشبكة في الموبايل والأبراج اللاسلكية.", scores: { telecom: 3 } }, { t: "إضاءة الشوارع ومحطات الكهرباء.", scores: { power: 3 } } ] },
+            { q: "إيه أكتر مادة كنت بتحس إنك فاهمها أو بتستمتع بيها في إعدادي؟", options: [ { t: "الرسم الهندسي واستنتاج المساقط.", scores: { arch: 3, mech: 2 } }, { t: "الميكانيكا (استاتيكا وديناميكا).", scores: { civil: 2, mech: 3 } }, { t: "الرياضة، البرمجة، والمنطق.", scores: { cs: 3, telecom: 2 } }, { t: "الفيزيا والكيميا وخواص المواد.", scores: { power: 2, textile: 3, civil: 1 } } ] },
+            { q: "لو نزلت تشتغل في مشروع كبير، تحب دورك يكون إيه؟", options: [ { t: "أدير العمال والفنيين في الموقع وأكون القائد.", scores: { civil: 3, power: 2 } }, { t: "أقعد في المكتب أصمم الفكرة على البرامج.", scores: { arch: 3, mech: 1 } }, { t: "أبرمج السيستم وأحل المشاكل المعقدة بالكود.", scores: { cs: 3, telecom: 1 } }, { t: "أنزل للمصنع وأشرف على المكن وخطوط الإنتاج.", scores: { mech: 3, textile: 2 } } ] },
+            { q: "إيه رأيك في التطور التكنولوجي السريع اللي بيحصل كل يوم؟", options: [ { t: "حاجة زي الفل! بحب أتعلم لغات وبرامج جديدة باستمرار.", scores: { cs: 3 } }, { t: "بحب التطور اللي بيحصل على مراحل أهدى شوية.", scores: { telecom: 3, power: 2, mech: 1 } }, { t: "بميل أكتر للقواعد الهندسية الثابتة اللي مبتتغيرش كتير.", scores: { civil: 3, arch: 2, textile: 2 } } ] },
+            { q: "إيه المنتج اللي تتمنى تكون إنت اللي عملته؟", options: [ { t: "أبلكيشن، موقع، أو ذكاء اصطناعي بيساعد الناس.", scores: { cs: 3 } }, { t: "عربية، طيارة، أو مكنة تصنيع ضخمة.", scores: { mech: 3 } }, { t: "مستشفى، كوبري، أو ناطحة سحاب.", scores: { civil: 3, arch: 2 } }, { t: "شبكة كهرباء أو لوحات تحكم بتشغل مصنع.", scores: { power: 3, telecom: 1 } } ] },
+            { q: "لما بتواجه مشكلة معقدة، بتفكر تحلها إزاي؟", options: [ { t: "برسم الفكرة (سكيتش) وأتخيلها في دماغي.", scores: { arch: 3 } }, { t: "بستخدم المعادلات عشان أحسب القوى والأحمال.", scores: { civil: 3, mech: 2 } }, { t: "بتتبع مسار الإشارة أو التيار في الدائرة.", scores: { power: 2, telecom: 3 } }, { t: "بكتب كود وأعمله اختبار (Test) عشان أصطاد الغلطة.", scores: { cs: 3 } } ] },
+            { q: "بتحب الشغل الإيدوي وإنك تفك وتركب الحاجات؟", options: [ { t: "أه جداً، بحب أفك الميكانيكا وأصلحها بيدي.", scores: { mech: 3 } }, { t: "بحب أفك الأجهزة الكهربائية وأوصل أسلاك.", scores: { power: 3, telecom: 1 } }, { t: "لا مليش في ده، أدواتي هي الكيبورد والماوس.", scores: { cs: 3, arch: 2 } } ] },
+            { q: "إيه الأخبار أو المقالات اللي بتشدك تقراها؟", options: [ { t: "الذكاء الاصطناعي، الهاكرز، وأمن المعلومات.", scores: { cs: 3 } }, { t: "الطاقة الشمسية والعربيات الكهربائية.", scores: { power: 3, mech: 1 } }, { t: "الروبوتات، المحركات، وعالم الطيران.", scores: { mech: 3 } }, { t: "المدن الذكية، العمارة الخضراء، والديكور.", scores: { arch: 3, civil: 1 } } ] },
+            { q: "لو دخلت مصنع غزل ونسيج كبير، إيه اللي هيلفت انتباهك فيه؟", options: [ { t: "كيميا الألوان وصبغ الخيوط.", scores: { textile: 3 } }, { t: "التروس والمكن وهو شغال.", scores: { mech: 3 } }, { t: "لوحات التحكم (PLC) اللي بتشغل المصنع ده كله.", scores: { power: 3 } }, { t: "السيرفرات والشبكة اللي بتربط المكن ببعضه.", scores: { cs: 3, telecom: 1 } } ] },
+            { q: "علاقتك إيه بالرياضة البحتة (تفاضل، تكامل، معادلات)؟", options: [ { t: "ممتاز فيها، وبحب استخدمها في تحليل الموجات.", scores: { telecom: 3, power: 1 } }, { t: "بفضل عليها الرياضة المتقطعة (Discrete) والمنطق.", scores: { cs: 3 } }, { t: "بستخدمها على القد عشان أحسب بيها أحمال وقوى.", scores: { civil: 3, mech: 2 } }, { t: "مليش فيها أوي، بفضل الجانب البصري والتخيل.", scores: { arch: 3 } } ] },
+            { q: "إيه رأيك في الشغل في الموقع (Site)؟ شمس وتراب وكده؟", options: [ { t: "عادي جداً، بحس إني مهندس بجد هناك.", scores: { civil: 3, mech: 2 } }, { t: "مقبول لو كان جزء من شغلي، بس بفضل المكتب أكتر.", scores: { power: 2, telecom: 2 } }, { t: "لا مبحبوش خالص، الشغل المكتبي والمكيف هو سكتي.", scores: { cs: 3, arch: 2 } } ] },
+            { q: "لما بتيجي تشتري لاب توب أو موبايل جديد، بتدور على إيه أول حاجة؟", options: [ { t: "قوة المعالج (Processor) والرامات وسرعة الأداء.", scores: { cs: 3, telecom: 2 } }, { t: "جودة الشاشة والألوان عشان تنفعني في التصميم.", scores: { arch: 3 } }, { t: "قوة البطارية والجهاز بيستحمل الصدمات ولا لأ.", scores: { power: 2, mech: 2 } } ] },
+            { q: "بتحب فكرة إنك تصمم نظام بيشتغل لوحده (Automation)؟", options: [ { t: "أه، أبرمج كود يخلي السيستم يفكر وياخد قرار.", scores: { cs: 3 } }, { t: "أه، عن طريق متحكمات وحساسات تشغل مكن المصنع.", scores: { power: 3, mech: 2 } }, { t: "أه، دوائر إلكترونية دقيقة تنفذ أوامر معينة.", scores: { telecom: 3 } }, { t: "لا مش سكتي، بفضل التصميم الإنشائي أو المعماري.", scores: { civil: 3, arch: 2 } } ] },
+            { q: "إيه مدى اهتمامك بالديناميكا الحرارية (Thermodynamics)؟", options: [ { t: "موضوع شيق جداً، بالذات في المحركات والتكييف.", scores: { mech: 3 } }, { t: "مهم بالنسبة لي عشان أعرف أعزل المبنى كويس.", scores: { arch: 2, civil: 1 } }, { t: "بهتم بيه بس عشان أعرف أبرد السيرفرات أو البوردات.", scores: { cs: 1, telecom: 1, power: 1 } }, { t: "مليش فيها خالص.", scores: { textile: 1 } } ] },
+            { q: "لو بتلعب لعبة استراتيجية (زي بناء المدن)، بتركز على إيه؟", options: [ { t: "تخطيط الشوارع وشكل المباني يكون حلو ومنظم.", scores: { arch: 3, civil: 1 } }, { t: "أظبط الموارد وأبني مصانع عشان أنتج أسرع.", scores: { mech: 3, power: 2 } }, { t: "البنية التحتية (ميه، كهربا، وطرق) تكون متوصلة صح.", scores: { civil: 3, power: 2 } }, { t: "بحب اخترق اللعبة أو أعملها تعديل (Modding).", scores: { cs: 3 } } ] },
+            { q: "بتحب تقعد على برامج زي AutoCAD أو SolidWorks؟", options: [ { t: "جداً، ممكن أقعد بالساعات من غير ما أزهق.", scores: { arch: 3, mech: 3, civil: 2 } }, { t: "بستخدمها على القد وقت ما أحتاج أرسم حاجة.", scores: { power: 2, telecom: 1 } }, { t: "لا بزهق منها، واجهات كتابة الكود أحلى بكتير.", scores: { cs: 3 } } ] },
+            { q: "إيه رأيك في تخطيط المطارات وتنظيم المرور؟", options: [ { t: "مجال قوي ومحتاج تخطيط وحسابات دقيقة للمساحات.", scores: { civil: 3 } }, { t: "يهمني فيه هندسة أبراج المراقبة والاتصالات بتاعتها.", scores: { telecom: 3 } }, { t: "مش من اهتماماتي.", scores: { cs: 1, mech: 1 } } ] },
+            { q: "إيه الأهم عندك: الفلوس الكتير ولا الاستقرار الوظيفي؟", options: [ { t: "الفلوس العالية، حتى لو الشغل فيه مخاطرة ومنافسة شرسة.", scores: { cs: 3, arch: 1 } }, { t: "أمان واستقرار في وظيفة ثابتة أو مصنع، ده الأهم.", scores: { power: 3, civil: 2, textile: 2 } }, { t: "خير الأمور الوسط، دخل كويس مع استقرار معقول.", scores: { telecom: 3, mech: 2 } } ] },
+            { q: "إيه رأيك في الكيميا وتفاعلات المواد؟", options: [ { t: "بحبها، دراسة خواص المواد والألوان ممتعة.", scores: { textile: 3 } }, { t: "بتقبلها عشان أفهم خلطات الخرسانة أو الإسفلت.", scores: { civil: 2 } }, { t: "ببعد عنها على قد ما أقدر.", scores: { cs: 3, telecom: 2, arch: 2 } } ] },
+            { q: "لو فكرت تفتح مشروعك الخاص (Start-up) في المستقبل، هيكون إيه؟", options: [ { t: "أبلكيشن أو موقع بيقدم خدمة جديدة.", scores: { cs: 3 } }, { t: "شركة مقاولات أو مكتب تصميم استشاري.", scores: { civil: 3, arch: 3 } }, { t: "ورشة تصنيع حديثة أو مصنع لقطع الغيار.", scores: { mech: 3, power: 2 } }, { t: "شركة بتركب شبكات أو أنظمة طاقة شمسية.", scores: { telecom: 3, power: 3 } } ] },
+            { q: "بتعرف تشتغل تحت ضغط وتزنق نفسك قبل التسليم (Deadline)؟", options: [ { t: "عادي، ممكن أسهر بالأيام عشان أخلص تصميم أو ماكيت.", scores: { arch: 3, cs: 1 } }, { t: "بفضل النظام وأخلص حساباتي في وقتها من غير زنقة.", scores: { civil: 3, mech: 2 } }, { t: "بشتغل أحسن لما أكون مزنوق في كود وتاسكات (Agile).", scores: { cs: 3 } }, { t: "بحب البيئة الهادية اللي مفيهاش مفاجآت وزنيقات.", scores: { power: 3, telecom: 2, textile: 2 } } ] },
+            { q: "إيه رأيك في مجال الهاكرز وحماية المعلومات (Cybersecurity)؟", options: [ { t: "مجال جامد، نفسي أتعلم أكتشف الثغرات وأقفلها.", scores: { cs: 3 } }, { t: "مهم بالنسبة لي عشان أشفر بيانات شبكات الاتصال.", scores: { telecom: 3 } }, { t: "مالوش علاقة بدماغي الهندسية.", scores: { civil: 2, mech: 2, arch: 2 } } ] },
+            { q: "لما جهاز بيبوظ قدامك، بتحب تعرف (إيه اللي بوظه) ولا (نمنع بوظانه إزاي)؟", options: [ { t: "إيه اللي بوظه في الكود عشان أصلح السطر الغلط (Debugging).", scores: { cs: 3 } }, { t: "نمنع إزاي إن الدائرة الكهربائية دي تتحرق تاني.", scores: { power: 3, telecom: 2 } }, { t: "نمنع إزاي إن الترس أو الجزء الميكانيكي ده يتكسر.", scores: { mech: 3, civil: 1 } } ] },
+            { q: "هل بتستمتع بالاحتمالات والإحصاء؟", options: [ { t: "أه، عشان دي أساسيات الذكاء الاصطناعي والداتا.", scores: { cs: 3 } }, { t: "أه، بنستخدمها في تحليل الإشارات اللاسلكية.", scores: { telecom: 3 } }, { t: "لا، بحب الحسابات الأكيدة 1+1=2 مش الاحتمالات.", scores: { civil: 2, arch: 2, power: 1 } } ] },
+            { q: "إيه رأيك في تصميم الواجهات وشكل الحاجة (UI/UX)؟", options: [ { t: "ممتع جداً، بحب أظبط شكل المواقع والتطبيقات.", scores: { cs: 3, arch: 1 } }, { t: "بفضل أظبط الشكل والديكور للمباني من جوه وبره.", scores: { arch: 3 } }, { t: "مبيهمنيش الشكل أوي، المهم المكنة أو السيستم شغال.", scores: { power: 3, mech: 3, civil: 2 } } ] },
+            { q: "بتحب فكرة السفر للشغل بره مصر؟", options: [ { t: "أه، ونفسي في أوروبا أو أمريكا عشان التكنولوجيا.", scores: { cs: 3, telecom: 2 } }, { t: "أه، ونفسي في الخليج عشان شغل المقاولات والبناء.", scores: { civil: 3, arch: 2, power: 2 } }, { t: "بفضل أقعد في بيتي وأشتغل (Remote) مع شركات بره.", scores: { cs: 3, arch: 1 } }, { t: "بحب الاستقرار في مصر وأنزل مصنع أو محطة هنا.", scores: { textile: 3, mech: 2, power: 1 } } ] },
+            { q: "شايف الهندسة المدنية إزاي؟", options: [ { t: "هندسة بتبني حضارات وبتسيب أثر بجد على الأرض.", scores: { civil: 3 } }, { t: "مجال قديم شوية وحاسس إنه مش ماشي مع التكنولوجيا.", scores: { cs: 2, telecom: 2 } }, { t: "حلوة بس متعبة وبدنياً مرهقة في المواقع.", scores: { arch: 2, power: 1 } } ] },
+            { q: "عندك فضول تعرف الألياف الضوئية (Fiber Optics) شغالة إزاي؟", options: [ { t: "جداً، مهتم بسرعات النت ونقل البيانات.", scores: { telecom: 3 } }, { t: "مهتم بيها عشان أعرف بتسرع السيرفرات إزاي.", scores: { cs: 2 } }, { t: "مش من اهتماماتي خالص.", scores: { civil: 2, mech: 2 } } ] },
+            { q: "لو قدامك كورسين: خرسانة ولا خوارزميات (Algorithms)؟", options: [ { t: "خرسانة طبعاً.", scores: { civil: 3, arch: 1 } }, { t: "خوارزميات وأكواد.", scores: { cs: 3 } }, { t: "ولا ده ولا ده، اديني دوائر ومحركات.", scores: { mech: 2, power: 2, telecom: 2 } } ] },
+            { q: "بتحب تتعامل مع عملاء وتفاصل معاهم؟", options: [ { t: "أه عادي، دي مهارة مهمة في إدارة المشاريع والمقاولات.", scores: { civil: 3, arch: 2 } }, { t: "لا، بحب أتعامل مع الأجهزة واللاب توب أحسن من البشر.", scores: { cs: 3, telecom: 2, mech: 1 } } ] },
+            { q: "تكنولوجيا الروبوتات بتشدك من ناحية إيه؟", options: [ { t: "دماغ الروبوت والكود اللي بيخليه يتحرك (السوفتوير).", scores: { cs: 3 } }, { t: "المفاصل، التروس، والمواتير اللي بتمشيه (الميكانيكا).", scores: { mech: 3 } }, { t: "حلقة الوصل بين الكود والموتور (الكنترول).", scores: { telecom: 3, power: 3 } } ] },
+            { q: "بتهتم بالتفاصيل الصغيرة؟ (يعني ملي متر في رسمة أو بيكسل في شاشة)", options: [ { t: "أه جداً، التفاصيل دي هي اللي بتعمل الشغل النظيف.", scores: { arch: 3, cs: 3 } }, { t: "ببص على المشروع ككل والمبنى بشكل عام (الصورة الكبيرة).", scores: { civil: 3, power: 2 } } ] },
+            { q: "إيه انطباعك عن قطاع المقاولات؟", options: [ { t: "سوق شغله حلو وفلوسه كتير ومطلوب دايماً.", scores: { power: 3, mech: 3, civil: 2 } }, { t: "مش سكتي خالص ومش شايف نفسي فيه.", scores: { cs: 3, telecom: 2, textile: 2 } } ] },
+            { q: "لو اطلب منك تشتغل بتكنولوجيا أول مرة تسمع عنها ومدرستهاش:", options: [ { t: "بفتح جوجل ويوتيوب وأعيش مع نفسي وأتعلمها (Self-study).", scores: { cs: 3, telecom: 2 } }, { t: "بتضايق، وبفضل اشتغل باللي اتعلمته في الكلية بس.", scores: { civil: 2, power: 1, textile: 1 } } ] },
+            { q: "لو اشتغلت في شركة عربيات زي (BMW)، تحب تعمل إيه هناك؟", options: [ { t: "أرسم شكل العربية وانسيابيتها من بره.", scores: { arch: 3 } }, { t: "أصمم الموتور، الفتيس، والعفشة.", scores: { mech: 3 } }, { t: "أبرمج شاشة العربية والـ GPS.", scores: { cs: 3 } }, { t: "أطور الرادارات وحساسات الركنة عشان متخبطش.", scores: { telecom: 3, power: 1 } } ] },
+            { q: "شخصيتك تنفع تبقى ريس أو مدير على صنايعية أكبر منك في السن؟", options: [ { t: "أه، بعرف أمشي كلمتي وأدير الموقع بثقة.", scores: { civil: 3, power: 2, mech: 2 } }, { t: "مليش في جو الإدارة، سيبني في حالي أعمل شغلي التقني في هدوء.", scores: { cs: 3, arch: 2, telecom: 2 } } ] },
+            { q: "لو دخلنا مصنع ضخم، أول حتة هتروحلها إيه؟", options: [ { t: "أوضة السيرفرات والشبكة.", scores: { cs: 3, telecom: 2 } }, { t: "أوضة الكهربا ولوحات المحولات الرئيسية.", scores: { power: 3 } }, { t: "خطوط الإنتاج والمكن الميكانيكي.", scores: { mech: 3 } }, { t: "أماكن خلط المواد والألوان.", scores: { textile: 3 } } ] },
+            { q: "عزل الصوت في المباني وتصميم المسارح.. حاجة تهمك؟", options: [ { t: "أه، عشان أصمم استوديوهات وقاعات معزولة صح.", scores: { arch: 3, civil: 1 } }, { t: "بهتم بالصوت من ناحية معالجته في الإشارات والموجات (ديجيتال).", scores: { telecom: 3, cs: 1 } }, { t: "مبيهمنيش أوي.", scores: { mech: 1, power: 1 } } ] },
+            { q: "إيه رأيك في الوقفة بجهاز المساحة (Total Station) في الشارع؟", options: [ { t: "حاجة أساسية وممتعة عشان أخطط الأرض صح.", scores: { civil: 3 } }, { t: "حاجة مملة جداً وتعب ع الفاضي.", scores: { cs: 2, telecom: 2, arch: 1 } } ] },
+            { q: "بتحب تدرس ميكانيكا الموائع (السوائل والغازات)؟", options: [ { t: "جداً، عشان أفهم الطلمبات وتصميم الطيارات.", scores: { mech: 3 } }, { t: "أه، عشان أعرف أصمم شبكات الميه والصرف.", scores: { civil: 3 } }, { t: "مليش في الموائع.", scores: { cs: 2, telecom: 2, power: 1 } } ] },
+            { q: "إيه المسمى الوظيفي اللي تحب يتكتب على الكارت بتاعك؟", options: [ { t: "Software Engineer / مهندس برمجيات.", scores: { cs: 3 } }, { t: "Structural Engineer / مهندس إنشائي.", scores: { civil: 3 } }, { t: "Control Engineer / مهندس تحكم.", scores: { telecom: 3, power: 2 } }, { t: "Maintenance Engineer / مهندس صيانة.", scores: { mech: 3, textile: 2 } } ] },
+            { q: "رأيك إيه في العمارة والتصميم المعماري؟", options: [ { t: "فن وذوق وموهبة قبل ما يكون هندسة.", scores: { arch: 3 } }, { t: "مجرد رسومات والمهندس المدني هو اللي بيشيل الليلة.", scores: { civil: 3, mech: 1 } }, { t: "مجال بعيد عن المنطق البرمجي والرياضي بتاعي.", scores: { cs: 2, telecom: 2 } } ] },
+            { q: "ممكن تتخصص في مجال ضيق جداً (Niche) ومحدش كتير شغال فيه؟", options: [ { t: "أه ياريت، عشان أبقى خبير نادر ومنافسيني قليلين.", scores: { textile: 3, telecom: 2 } }, { t: "لا، بحب المجال الواسع اللي أقدر أغير مساري فيه بسهولة.", scores: { cs: 3, civil: 2, mech: 1 } } ] },
+            { q: "لما بتستخدم الذكاء الاصطناعي (زي ChatGPT أو Midjourney):", options: [ { t: "ببقى عايز أعرف هو شغال إزاي من جوه (الشبكات العصبية).", scores: { cs: 3 } }, { t: "بستخدمه عشان يجيبلي أفكار تصميم للمباني بتاعتي.", scores: { arch: 3 } }, { t: "مبعتمدش عليه في شغلي عشان الحسابات الهندسية مبتستحملش هبد.", scores: { civil: 3, power: 2 } } ] },
+            { q: "لو بتعمل مشروع وطلعلك Error (غلطة مش مفهومة):", options: [ { t: "بتحمس إني أكتشفها وأقعد وراها لحد ما أصلح الكود.", scores: { cs: 3, telecom: 2 } }, { t: "بتعصب وبحبط وبحتاج أفصل شوية عشان أعرف أرجع.", scores: { arch: 2, civil: 1 } } ] },
+            { q: "نظام إطفاء الحريق في المباني (Firefighting) يهمك؟", options: [ { t: "ده شغل ميكانيكا قوي ومطلوب في أي مبنى.", scores: { mech: 3, civil: 2 } }, { t: "بيهمني منه جزء إنذار الحريق الكهربائي (Fire Alarm) بس.", scores: { power: 3, telecom: 1 } }, { t: "مش من اهتماماتي.", scores: { cs: 2, textile: 1 } } ] },
+            { q: "بتعرف تشرح المعلومات المعقدة وتبسطها لزمايلك؟", options: [ { t: "أه جداً، وبحب جو إني أكون Instructor أو استشاري.", scores: { cs: 2, telecom: 2, civil: 2 } }, { t: "لا، بفضل أشتغل في صمت وماليش احتكاك بحد أوي.", scores: { arch: 2, mech: 2, power: 1 } } ] },
+            { q: "إيه رأيك في هندسة الغزل والنسيج بصراحة؟", options: [ { t: "صناعة تقيلة وليها مستقبل لو البلد ركزت عليها.", scores: { textile: 3 } }, { t: "مش فاهم بيعملوا إيه بالظبط ومش سكتي.", scores: { cs: 2, civil: 2, arch: 2 } } ] },
+            { q: "إيه عصب التكنولوجيا في الزمن اللي إحنا فيه ده؟", options: [ { t: "الرقائق الإلكترونية وأشباه الموصلات (البروسيسور).", scores: { telecom: 3, cs: 1 } }, { t: "البرمجيات والسحابة (Cloud) والـ AI.", scores: { cs: 3 } }, { t: "توليد الطاقة عشان كل ده يشتغل أصلاً.", scores: { power: 3 } } ] },
+            { q: "في الآخر، هتبني قرارك في اختيار القسم بناءً على إيه؟", options: [ { t: "شغفي وبس، حتى لو السوق زحمة.", scores: { arch: 3, textile: 2 } }, { t: "سوق العمل وفرص السفر للخليج المضمونة.", scores: { civil: 3, power: 2 } }, { t: "المرونة والشغل من البيت والمستقبل بتاع بره.", scores: { cs: 3, telecom: 2 } } ] },
 
-            // --- 51 to 100: Advanced Mode Questions (Deep Dives & Specializations) ---
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة واحتراف: (الذكاء الاصطناعي وتعلم الآلة AI/ML)؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { cs: 3 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { telecom: 1, power: 1 } }, { t: "لا يناسبني إطلاقاً.", scores: { civil: 1, arch: 1 } } ] },
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة واحتراف: (تصميم المنشآت الخرسانية والمعدنية)؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { civil: 3 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { arch: 2, mech: 1 } }, { t: "لا يناسبني إطلاقاً.", scores: { cs: 1, telecom: 1 } } ] },
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة واحتراف: (التصميم الداخلي والديكور Interior Design)؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { arch: 3 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { civil: 1 } }, { t: "لا يناسبني إطلاقاً.", scores: { power: 1, cs: 1 } } ] },
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة واحتراف: (نظم التبريد والتكييف المركزي HVAC)؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { mech: 3 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { power: 1, civil: 1 } }, { t: "لا يناسبني إطلاقاً.", scores: { cs: 1, arch: 1 } } ] },
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة واحتراف: (وقاية الشبكات الكهربائية ومحطات المحولات)؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { power: 3 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { mech: 1, telecom: 1 } }, { t: "لا يناسبني إطلاقاً.", scores: { arch: 1, cs: 1 } } ] },
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة واحتراف: (معالجة الإشارات الرقمية DSP والترددات)؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { telecom: 3 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { cs: 2, power: 1 } }, { t: "لا يناسبني إطلاقاً.", scores: { civil: 1, arch: 1 } } ] },
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة واحتراف: (هندسة البوليمرات وكيمياء الألياف)؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { textile: 3 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { mech: 1 } }, { t: "لا يناسبني إطلاقاً.", scores: { cs: 1, telecom: 1 } } ] },
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة واحتراف: (برمجة وتطوير مواقع الويب Web Development)؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { cs: 3 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { telecom: 1 } }, { t: "لا يناسبني إطلاقاً.", scores: { civil: 1, mech: 1 } } ] },
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة واحتراف: (ميكانيكا التربة وتصميم الأساسات)؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { civil: 3 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { arch: 1 } }, { t: "لا يناسبني إطلاقاً.", scores: { cs: 1, telecom: 1 } } ] },
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة واحتراف: (برمجة الأنظمة المدمجة Embedded Systems)؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { telecom: 3, cs: 2 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { power: 2, mech: 1 } }, { t: "لا يناسبني إطلاقاً.", scores: { civil: 1, arch: 1 } } ] },
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة واحتراف: (تصميم لوحات الكلاسيك كنترول والـ PLC)؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { power: 3, mech: 2 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { telecom: 1 } }, { t: "لا يناسبني إطلاقاً.", scores: { arch: 1, cs: 1 } } ] },
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة واحتراف: (أمن المعلومات والشبكات Cybersecurity)؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { cs: 3, telecom: 2 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { power: 1 } }, { t: "لا يناسبني إطلاقاً.", scores: { civil: 1, mech: 1 } } ] },
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة واحتراف: (هندسة الطرق والمطارات والمرور)؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { civil: 3 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { arch: 1 } }, { t: "لا يناسبني إطلاقاً.", scores: { cs: 1, power: 1 } } ] },
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة واحتراف: (تاريخ العمارة وتخطيط المدن)؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { arch: 3 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { civil: 2 } }, { t: "لا يناسبني إطلاقاً.", scores: { mech: 1, telecom: 1 } } ] },
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة واحتراف: (ماكينات التحكم الرقمي CNC وخطوط الإنتاج)؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { mech: 3 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { power: 1, textile: 1 } }, { t: "لا يناسبني إطلاقاً.", scores: { arch: 1, cs: 1 } } ] },
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة واحتراف: (تكنولوجيا الجيل الخامس 5G والهوائيات)؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { telecom: 3 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { cs: 1, power: 1 } }, { t: "لا يناسبني إطلاقاً.", scores: { civil: 1, mech: 1 } } ] },
-            { q: "[موقف متخيل] إذا كُلفت بتصميم مستشفى، ما هو أول شيء ستفكر فيه لحل المشكلة؟", options: [ { t: "توزيع الغرف والممرات لراحة المرضى والطاقم الطبي.", scores: { arch: 3 } }, { t: "الأحمال الإنشائية للأجهزة الثقيلة وتأمين المبنى.", scores: { civil: 3 } }, { t: "أنظمة التهوية، التكييف، والغازات الطبية.", scores: { mech: 3 } }, { t: "المولدات الاحتياطية وشبكة الكهرباء غير المنقطعة (UPS).", scores: { power: 3 } } ] },
-            { q: "[موقف متخيل] حدث عطل في نظام إشارة المرور في مدينة، من يجب أن يتدخل؟", options: [ { t: "مهندس السوفتوير لتحديث خوارزمية التوقيت.", scores: { cs: 3 } }, { t: "مهندس التحكم أو الاتصالات لإصلاح السينسور أو الربط الشبكي.", scores: { telecom: 3, power: 2 } }, { t: "مهندس الطرق لتغيير تخطيط التقاطع بالكامل.", scores: { civil: 3 } } ] },
-            { q: "[موقف متخيل] طلب منك إنشاء مشروع تخرج بتكلفة منخفضة جداً:", options: [ { t: "سأكتب برنامجاً أو تطبيقاً، لا يحتاج سوى اللابتوب الخاص بي.", scores: { cs: 3 } }, { t: "سأصمم ماكيت أو محاكاة على الكمبيوتر.", scores: { arch: 2, civil: 2 } }, { t: "سأجمع دوائر إلكترونية بسيطة وأبرمجها (Arduino).", scores: { telecom: 3, power: 2 } } ] },
-            { q: "[مقارنة] أيهما تفضل دراسته بشكل أعمق؟", options: [ { t: "الفيزياء الكهرومغناطيسية والضوئيات.", scores: { telecom: 3, power: 1 } }, { t: "ميكانيكا الكم وتكنولوجيا النانو.", scores: { telecom: 1, mech: 1, cs: 1 } }, { t: "خواص الخرسانة والصلب (Steel).", scores: { civil: 3 } }, { t: "المنطق الرياضي (Boolean Algebra).", scores: { cs: 3 } } ] },
-            { q: "[مقارنة] أيهما تجد نفسك مهتماً بعمله أكثر؟", options: [ { t: "تصميم شبكة إنترنت لاسلكية تغطي جامعة بالكامل.", scores: { telecom: 3 } }, { t: "تطوير موقع الجامعة الإلكتروني وقاعدة بيانات الطلاب.", scores: { cs: 3 } }, { t: "تصميم المدرجات والمباني الجديدة للجامعة.", scores: { arch: 3, civil: 2 } } ] },
-            { q: "[تحليل شخصي] هل تشعر بالملل بسرعة من المهام الروتينية المتكررة؟", options: [ { t: "نعم، أحتاج دائماً لتحدي عقلي جديد أو كود مختلف.", scores: { cs: 3, arch: 2 } }, { t: "لا، الروتين يعني الاستقرار وأنا أقدر الدقة في التكرار.", scores: { civil: 2, power: 2, textile: 2 } } ] },
-            { q: "[تحليل شخصي] إذا خُيرت بين حفظ قانون رياضي معقد أو فهم منطق خوارزمية طويلة:", options: [ { t: "أفضل حفظ وتطبيق القانون لإنهاء الحسابات بسرعة.", scores: { civil: 3, mech: 2 } }, { t: "أفضل فهم منطق الخوارزمية لأنني أكره الحفظ.", scores: { cs: 3, telecom: 2 } } ] },
-            { q: "[مفاهيم دقيقة] ما رأيك في دراسة (الرسم الميكانيكي) والتفاوتات (Tolerances)؟", options: [ { t: "مهم جداً لضمان دقة تصنيع الأجزاء وتجميعها.", scores: { mech: 3 } }, { t: "تفاصيل مزعجة ولا أحب التدقيق فيها.", scores: { cs: 2, telecom: 1 } } ] },
-            { q: "[مفاهيم دقيقة] ماذا يمثل لك (السيرفر Server)؟", options: [ { t: "بيئة أرفع عليها الكود الخاص بي وأدير قواعد البيانات.", scores: { cs: 3 } }, { t: "جهاز فيزيائي أحتاج لربطه بالشبكة وتبريده وتوفير الطاقة له.", scores: { telecom: 2, power: 2, mech: 1 } }, { t: "لا أتعامل مع السيرفرات في مجالي.", scores: { civil: 3, arch: 2 } } ] },
-            { q: "[مفاهيم دقيقة] ما رأيك في (تخطيط المشاريع Project Management) كـ Primavera أو MS Project؟", options: [ { t: "أساس عملي لضمان تسليم المشروع في وقته وميزانيته.", scores: { civil: 3 } }, { t: "أداة إدارية مملة، أفضل العمل التقني البحت.", scores: { cs: 2, telecom: 2, mech: 1 } } ] },
-            { q: "[اختيارات العمل] أين تفضل أن تكون نقطة قوتك التنافسية (Competitive Advantage) في السوق؟", options: [ { t: "سرعتي في تعلم التكنولوجيا الجديدة قبل غيري.", scores: { cs: 3 } }, { t: "خبرتي التراكمية في تصميم شبكات أو أنظمة معقدة لا تتغير كثيراً.", scores: { telecom: 3, power: 3 } }, { t: "علاقاتي في السوق وقدرتي على إدارة المقاولين والموردين.", scores: { civil: 3 } }, { t: "اللمسة الجمالية الفريدة (Portfolio) الخاص بي.", scores: { arch: 3 } } ] },
-            { q: "[التأثير المجتمعي] كيف تريد أن يرى الناس نتيجة عملك؟", options: [ { t: "يقولون: 'هذا المبنى تحفة معمارية'.", scores: { arch: 3, civil: 1 } }, { t: "يقولون: 'هذا التطبيق سهل حياتنا'.", scores: { cs: 3 } }, { t: "لا يهمني أن يروه، يكفي أن الشبكة/الكهرباء تعمل بسببي دون أن يشعروا.", scores: { telecom: 3, power: 3 } } ] },
-            { q: "[المادة الأسوأ] ما هي أكثر مادة كنت تتمنى إزالتها من إعدادي هندسة؟", options: [ { t: "الكيمياء.", scores: { cs: 2, telecom: 2, arch: 2 } }, { t: "الرسم الهندسي واستنتاج المساقط.", scores: { cs: 3, telecom: 1 } }, { t: "الرياضيات والمنطق.", scores: { arch: 3, civil: 1 } }, { t: "تاريخ الهندسة أو المواد النظرية.", scores: { mech: 2, power: 2 } } ] },
-            { q: "[تخيل المستقبل] بعد 15 عاماً، أين ترى نفسك؟", options: [ { t: "CTO (مدير تقني) في شركة برمجيات أو Start-up.", scores: { cs: 3 } }, { t: "مدير مشروع (Project Manager) في شركة مقاولات كبرى.", scores: { civil: 3 } }, { t: "خبير استشاري لشبكات الاتصالات أو الطاقة.", scores: { telecom: 3, power: 3 } }, { t: "صاحب مكتب تصميمات هندسية ومعمارية خاص.", scores: { arch: 3 } } ] },
-            { q: "[موقف متخيل] طلب منك برمجة شيء، ولكن اللغة المستخدمة قديمة جداً (Legacy Code):", options: [ { t: "أرفض أو أقترح إعادة كتابة النظام بلغة حديثة.", scores: { cs: 3 } }, { t: "أحاول فهمها وتعديل المطلوب فقط لأن النظام يعمل ومستقر.", scores: { telecom: 3, power: 2 } } ] },
-            { q: "[تحديات هندسية] ما هو التحدي الأكبر الذي تفضل مواجهته؟", options: [ { t: "تصميم مبنى مقاوم للزلازل في منطقة نشطة.", scores: { civil: 3 } }, { t: "حماية بيانات بنك من هجوم سيبراني معقد.", scores: { cs: 3, telecom: 1 } }, { t: "تصميم نظام تبريد لمحطة فضاء.", scores: { mech: 3 } } ] },
-            { q: "[أدوات العمل] إذا تم إعطاؤك ميزانية مفتوحة لشراء جهاز عمل، ستختار:", options: [ { t: "MacBook Pro بأعلى مواصفات لكتابة الأكواد.", scores: { cs: 3 } }, { t: "محطة عمل (Workstation) بشاشة ضخمة وكارت شاشة خارق للرندرة.", scores: { arch: 3, civil: 1 } }, { t: "أجهزة قياس ذبذبات (Oscilloscope) ومعدات قياس دقيقة.", scores: { telecom: 3, power: 2 } } ] },
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة: (تكنولوجيا الأقمار الصناعية Satellite Communications)؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { telecom: 3 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { cs: 1 } }, { t: "لا يناسبني إطلاقاً.", scores: { civil: 1, mech: 1 } } ] },
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة: (هندسة الميكاترونكس Mechatronics)؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { mech: 3, power: 2 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { cs: 1, telecom: 1 } }, { t: "لا يناسبني إطلاقاً.", scores: { civil: 1, arch: 1 } } ] },
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة: (إدارة الجودة الشاملة Quality Control) في المصانع؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { mech: 2, textile: 2 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { civil: 1, power: 1 } }, { t: "لا يناسبني إطلاقاً.", scores: { cs: 2, arch: 2 } } ] },
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة: (تكنولوجيا النانو Nanotechnology) واستخدامها في المواد؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { mech: 2, textile: 2, civil: 1 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { telecom: 1, cs: 1 } }, { t: "لا يناسبني إطلاقاً.", scores: { arch: 1 } } ] },
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة: (الأنظمة الخبيرة Expert Systems) وصنع القرار برمجياً؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { cs: 3 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { telecom: 1 } }, { t: "لا يناسبني إطلاقاً.", scores: { civil: 1, mech: 1 } } ] },
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة: (تصميم شبكات الصرف والمياه Sanitary Engineering)؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { civil: 3 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { mech: 1 } }, { t: "لا يناسبني إطلاقاً.", scores: { cs: 1, telecom: 1, arch: 1 } } ] },
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة: (هندسة الإضاءة البصرية والمناظر اللاندسكيب)؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { arch: 3 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { civil: 1, power: 1 } }, { t: "لا يناسبني إطلاقاً.", scores: { cs: 1, mech: 1 } } ] },
-            { q: "[تقييم متقدم] ما مدى رغبتك في دراسة: (إلكترونيات القوى Power Electronics) في محركات السيارات الكهربائية؟", options: [ { t: "شغف كبير، أود احتراف هذا المجال.", scores: { power: 3, telecom: 1 } }, { t: "مثير للاهتمام كمعرفة عامة.", scores: { mech: 2 } }, { t: "لا يناسبني إطلاقاً.", scores: { civil: 1, arch: 1 } } ] },
-            { q: "[مقارنة نهائية] إذا كنت ستقضي 5 سنوات قادمة من حياتك في دراسة شيء واحد فقط:", options: [ { t: "البرمجيات، الخوارزميات، وتكنولوجيا المعلومات.", scores: { cs: 3 } }, { t: "الدوائر الإلكترونية، الاتصالات، والتحكم.", scores: { telecom: 3, power: 2 } }, { t: "تصميم المباني، الإنشاءات، وإدارة المواقع.", scores: { civil: 3, arch: 2 } }, { t: "الماكينات، المحركات، وعلم المواد الديناميكية.", scores: { mech: 3, textile: 1 } } ] },
-            { q: "[مقارنة نهائية] كيف تتعامل مع فكرة (الخطأ الهندسي)؟", options: [ { t: "الخطأ وارد، ويمكن إصلاحه بتحديث (Update) سريع للكود.", scores: { cs: 3 } }, { t: "الخطأ مكلف، ويحتاج لإعادة ضبط المصنع أو استبدال بوردة.", scores: { telecom: 2, power: 2 } }, { t: "الخطأ كارثي، قد يؤدي لانهيار مبنى أو خسائر في الأرواح، لذا الحسابات دقيقة جداً.", scores: { civil: 3, mech: 2 } } ] },
-            { q: "[مقارنة نهائية] هل تفضل التعامل مع:", options: [ { t: "المايكرو (Micro): أشياء دقيقة لا تُرى بالعين المجردة كالإشارات والبيانات.", scores: { cs: 3, telecom: 3 } }, { t: "الماكرو (Macro): أشياء ضخمة وملموسة كالكباري والمصانع والمحركات.", scores: { civil: 3, mech: 3, power: 2 } } ] },
-            { q: "[مقارنة نهائية] ما هو شعورك تجاه مادة (الرسم المجمّع Assembly Drawing)؟", options: [ { t: "استمتعت جداً بتخيل كيفية تداخل الأجزاء الميكانيكية لتعمل معاً.", scores: { mech: 3 } }, { t: "كانت معقدة ومملة، أفضل التفكير المنطقي المجرد.", scores: { cs: 2, telecom: 1 } }, { t: "عادية، أفضل الرسم الإنشائي أو المعماري عليها.", scores: { civil: 2, arch: 2 } } ] },
-            { q: "[مقارنة نهائية] الكود البرمجي بالنسبة لك هو:", options: [ { t: "مهنتي الأساسية وكل حياتي المستقبلية.", scores: { cs: 3 } }, { t: "أداة لبرمجة هاردوير أو متحكم إلكتروني (Embedded).", scores: { telecom: 3, power: 2 } }, { t: "مجرد كورس أخذته في الكلية ولا أريد العودة له.", scores: { civil: 3, arch: 3, mech: 2 } } ] },
-            { q: "[مقارنة نهائية] هل تمتلك القدرة على التخيل الفراغي (Spatial Visualization)؟", options: [ { t: "بدرجة عالية جداً، أستطيع تخيل المباني والقطع من جميع الزوايا.", scores: { arch: 3, mech: 2 } }, { t: "بدرجة متوسطة، تكفي لفهم المخططات الهندسية.", scores: { civil: 2, power: 1 } }, { t: "بدرجة ضعيفة، أفضل التفكير التسلسلي والمنطقي.", scores: { cs: 3, telecom: 2 } } ] },
-            { q: "[مقارنة نهائية] في النهاية، ما الذي تخشاه أكثر في مستقبلك؟", options: [ { t: "أن أعمل في مجال روتيني لا يوجد به إبداع أو تجديد يومي.", scores: { cs: 3, arch: 2 } }, { t: "أن تتطور التكنولوجيا بسرعة وأجد نفسي خارج سوق العمل.", scores: { telecom: 3, power: 2, civil: 2 } }, { t: "أن أضطر للعمل في بيئة غير مريحة (مواقع، شمس، تراب).", scores: { cs: 2, arch: 2, telecom: 1 } } ] },
-            { q: "[سؤال أخير] هل أنت مستعد لاتخاذ قرارك وتحمل مسؤوليته؟", options: [ { t: "نعم، أريد معرفة النتيجة للبدء في مساري فوراً متوكلاً على الله.", scores: { cs: 1, telecom: 1, power: 1, mech: 1, civil: 1, arch: 1, textile: 1 } } ] }
+            // --- 51 to 100: Advanced Mode (أسئلة في العظم) ---
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (الذكاء الاصطناعي وتعلم الآلة)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { cs: 3 } }, { t: "حلو كمعلومة عامة.", scores: { telecom: 1, power: 1 } }, { t: "مليش فيه.", scores: { civil: 1, arch: 1 } } ] },
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (تصميم المنشآت الخرسانية والحديد)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { civil: 3 } }, { t: "حلو كمعلومة عامة.", scores: { arch: 2, mech: 1 } }, { t: "مليش فيه.", scores: { cs: 1, telecom: 1 } } ] },
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (التصميم الداخلي والديكور)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { arch: 3 } }, { t: "حلو كمعلومة عامة.", scores: { civil: 1 } }, { t: "مليش فيه.", scores: { power: 1, cs: 1 } } ] },
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (أنظمة التكييف المركزي للمولات)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { mech: 3 } }, { t: "حلو كمعلومة عامة.", scores: { power: 1, civil: 1 } }, { t: "مليش فيه.", scores: { cs: 1, arch: 1 } } ] },
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (محطات المحولات وشبكات الضغط العالي)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { power: 3 } }, { t: "حلو كمعلومة عامة.", scores: { mech: 1, telecom: 1 } }, { t: "مليش فيه.", scores: { arch: 1, cs: 1 } } ] },
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (معالجة الإشارات اللاسلكية والترددات)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { telecom: 3 } }, { t: "حلو كمعلومة عامة.", scores: { cs: 2, power: 1 } }, { t: "مليش فيه.", scores: { civil: 1, arch: 1 } } ] },
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (كيمياء البوليمرات والألياف الصناعية)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { textile: 3 } }, { t: "حلو كمعلومة عامة.", scores: { mech: 1 } }, { t: "مليش فيه.", scores: { cs: 1, telecom: 1 } } ] },
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (برمجة وتطوير مواقع الويب)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { cs: 3 } }, { t: "حلو كمعلومة عامة.", scores: { telecom: 1 } }, { t: "مليش فيه.", scores: { civil: 1, mech: 1 } } ] },
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (ميكانيكا التربة وتأسيس العمارات)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { civil: 3 } }, { t: "حلو كمعلومة عامة.", scores: { arch: 1 } }, { t: "مليش فيه.", scores: { cs: 1, telecom: 1 } } ] },
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (الأنظمة المدمجة وبرمجة عقل العربيات)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { telecom: 3, cs: 2 } }, { t: "حلو كمعلومة عامة.", scores: { power: 2, mech: 1 } }, { t: "مليش فيه.", scores: { civil: 1, arch: 1 } } ] },
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (لوحات الكلاسيك كنترول والـ PLC)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { power: 3, mech: 2 } }, { t: "حلو كمعلومة عامة.", scores: { telecom: 1 } }, { t: "مليش فيه.", scores: { arch: 1, cs: 1 } } ] },
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (الهاكرز الأخلاقي وأمن الشبكات)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { cs: 3, telecom: 2 } }, { t: "حلو كمعلومة عامة.", scores: { power: 1 } }, { t: "مليش فيه.", scores: { civil: 1, mech: 1 } } ] },
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (تصميم الكباري وتخطيط المرور)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { civil: 3 } }, { t: "حلو كمعلومة عامة.", scores: { arch: 1 } }, { t: "مليش فيه.", scores: { cs: 1, power: 1 } } ] },
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (تاريخ الفن المعماري وتخطيط المدن)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { arch: 3 } }, { t: "حلو كمعلومة عامة.", scores: { civil: 2 } }, { t: "مليش فيه.", scores: { mech: 1, telecom: 1 } } ] },
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (مكن الـ CNC وخطوط الإنتاج الأوتوماتيك)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { mech: 3 } }, { t: "حلو كمعلومة عامة.", scores: { power: 1, textile: 1 } }, { t: "مليش فيه.", scores: { arch: 1, cs: 1 } } ] },
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (تكنولوجيا شبكات الـ 5G)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { telecom: 3 } }, { t: "حلو كمعلومة عامة.", scores: { cs: 1, power: 1 } }, { t: "مليش فيه.", scores: { civil: 1, mech: 1 } } ] },
+            { q: "[موقف] لو اطلب منك تصمم مستشفى، أول حاجة هتفكر فيها إيه؟", options: [ { t: "أوزع الأوض والممرات بشكل يريح الدكاترة والعيانين.", scores: { arch: 3 } }, { t: "أحسب أحمال الأجهزة التقيلة اللي هتتحط في المبنى.", scores: { civil: 3 } }, { t: "أظبط التكييف المركزي ومواسير الأكسجين.", scores: { mech: 3 } }, { t: "أضمن إن الكهربا متقطعش أبداً وأوفر مولدات (UPS).", scores: { power: 3 } } ] },
+            { q: "[موقف] إشارة مرور عطلت، مين اللي المفروض يحل المشكلة دي؟", options: [ { t: "مهندس السوفتوير عشان يظبط كود التوقيت.", scores: { cs: 3 } }, { t: "مهندس الاتصالات عشان يصلح السينسور اللي باظ.", scores: { telecom: 3, power: 2 } }, { t: "مهندس الطرق عشان يغير التخطيط الغلط ده كله.", scores: { civil: 3 } } ] },
+            { q: "[موقف] مشروع تخرجك ميزانيته صفر، هتعمل إيه؟", options: [ { t: "هعمل أبلكيشن أو برنامج.. مش محتاج غير اللاب بتاعي.", scores: { cs: 3 } }, { t: "هعمل ماكيت 3D أو محاكاة على البرامج.", scores: { arch: 2, civil: 2 } }, { t: "هجيب شوية مقاومات واردوينو رخيص وأبرمجهم.", scores: { telecom: 3, power: 2 } } ] },
+            { q: "[مقارنة] حابب تتعمق في أنهي علم من دول؟", options: [ { t: "الفيزيا الكهرومغناطيسية والضوء.", scores: { telecom: 3, power: 1 } }, { t: "ميكانيكا الكم وتكنولوجيا النانو.", scores: { telecom: 1, mech: 1, cs: 1 } }, { t: "خواص الخرسانة والحديد التسليح.", scores: { civil: 3 } }, { t: "المنطق الرياضي (0 و 1).", scores: { cs: 3 } } ] },
+            { q: "[مقارنة] تحب تمسك أنهي مشروع في دول لجامعتك؟", options: [ { t: "أعمل تغطية واي فاي للجامعة كلها بدون تقطيع.", scores: { telecom: 3 } }, { t: "أعمل سيستم شؤون الطلبة وقاعدة البيانات.", scores: { cs: 3 } }, { t: "أصمم مدرجات جديدة بشكل مودرن.", scores: { arch: 3, civil: 2 } } ] },
+            { q: "[تحليل] بتزهق بسرعة من الشغل الروتيني اللي بيتكرر؟", options: [ { t: "أه، دايماً بحتاج كود جديد أو تحدي يخلي دماغي تشتغل.", scores: { cs: 3, arch: 2 } }, { t: "لا، الروتين معناه دقة واستقرار وأنا بحب كده.", scores: { civil: 2, power: 2, textile: 2 } } ] },
+            { q: "[تحليل] لو خيروك بين تحفظ قانون رياضي معقد ولا تفهم خوارزمية طويلة؟", options: [ { t: "أحفظ القانون وأعوض فيه وأخلص إنجازاً للوقت.", scores: { civil: 3, mech: 2 } }, { t: "أفهم الخوارزمية عشان أنا بكره الحفظ أصلاً.", scores: { cs: 3, telecom: 2 } } ] },
+            { q: "[تريكات] إيه رأيك في موضوع الـ Tolerances والتفاوتات في الرسم؟", options: [ { t: "حاجة في منتهى الأهمية عشان المكن يركب على بعضه.", scores: { mech: 3 } }, { t: "تفاصيل خنيقة وبكره أركز فيها.", scores: { cs: 2, telecom: 1 } } ] },
+            { q: "[تريكات] يعني إيه (سيرفر) بالنسبة لك؟", options: [ { t: "مكان برفع عليه الموقع بتاعي وقواعد البيانات.", scores: { cs: 3 } }, { t: "جهاز هاردوير محتاج أربطه بشبكة وأبرده وأوفرله كهربا.", scores: { telecom: 2, power: 2, mech: 1 } }, { t: "حاجة مبسمعش عنها في مجالي أصلاً.", scores: { civil: 3, arch: 2 } } ] },
+            { q: "[تريكات] إيه رأيك في برامج إدارة المشاريع زي Primavera؟", options: [ { t: "ده أساس شغلي عشان أسلم المشروع في ميعاده.", scores: { civil: 3 } }, { t: "برامج إدارية مملة، سيبني أكتب كود أو أرسم أحسن.", scores: { cs: 2, telecom: 2, mech: 1 } } ] },
+            { q: "[مستقبلك] تحب نقطة قوتك في السوق تكون إيه؟", options: [ { t: "سرعتي في إني أتعلم تكنولوجيا جديدة نزلت إمبارح.", scores: { cs: 3 } }, { t: "خبرتي الطويلة في دوائر وشبكات مبتتغيرش كتير.", scores: { telecom: 3, power: 3 } }, { t: "علاقاتي وصياعتي في إدارة المقاولين والموردين.", scores: { civil: 3 } }, { t: "الـ Portfolio وتصميماتي اللي مفيش منها اتنين.", scores: { arch: 3 } } ] },
+            { q: "[الناس هتقول إيه] تحب الناس تشوف نتيجة شغلك وتقول إيه؟", options: [ { t: "واو، المبنى ده تحفة معمارية!", scores: { arch: 3, civil: 1 } }, { t: "الأبلكيشن ده سهل علينا حياتنا بجد.", scores: { cs: 3 } }, { t: "مش مهم يشوفوه، المهم النت والكهربا شغالين بسبب شغلي.", scores: { telecom: 3, power: 3 } } ] },
+            { q: "[بصراحة] إيه أكتر مادة كان نفسك تتلغي من إعدادي؟", options: [ { t: "الكيميا.", scores: { cs: 2, telecom: 2, arch: 2 } }, { t: "الرسم واستنتاج المساقط.", scores: { cs: 3, telecom: 1 } }, { t: "الرياضة والمنطق.", scores: { arch: 3, civil: 1 } }, { t: "تاريخ الهندسة والمواد النظري الدش.", scores: { mech: 2, power: 2 } } ] },
+            { q: "[المستقبل] بعد 15 سنة، تتخيل نفسك فين؟", options: [ { t: "مدير تقني (CTO) في شركة برمجة كبيرة.", scores: { cs: 3 } }, { t: "مدير مشروع (Project Manager) في المقاولين العرب مثلاً.", scores: { civil: 3 } }, { t: "خبير استشاري لشبكات المحمول أو الكهرباء.", scores: { telecom: 3, power: 3 } }, { t: "صاحب مكتب ديكور وتصميمات باسمي.", scores: { arch: 3 } } ] },
+            { q: "[موقف] طلبوا منك تعدل كود مكتوب بلغة قديمة جداً ومقرفة:", options: [ { t: "أرفض، أو أقولهم نهد السيستم ونعمله بلغة حديثة أحسن.", scores: { cs: 3 } }, { t: "أحاول أفهمه وأعدل اللي طالبينه بس طالما شغال.", scores: { telecom: 3, power: 2 } } ] },
+            { q: "[تحدي] إيه التحدي اللي يخليك تتحمس تحله؟", options: [ { t: "أصمم عمارة في اليابان تستحمل الزلازل.", scores: { civil: 3 } }, { t: "أحمي بنك من هجمة هاكرز (Cyber-attack).", scores: { cs: 3, telecom: 1 } }, { t: "أصمم تكييف لمحطة فضاء فوق.", scores: { mech: 3 } } ] },
+            { q: "[فلوس كتير] لو معاك ميزانية مفتوحة تشتري جهاز لشغلك، هتجيب إيه؟", options: [ { t: "ماك بوك برو (MacBook Pro) عشان أكتب كود بمزاج.", scores: { cs: 3 } }, { t: "كمبيوتر تجميعة خارقة بكارت شاشة غبي للرندرة.", scores: { arch: 3, civil: 1 } }, { t: "أجهزة قياس ذبذبات (Oscilloscope) ومعدات دقيقة غالية.", scores: { telecom: 3, power: 2 } } ] },
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (تكنولوجيا الأقمار الصناعية)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { telecom: 3 } }, { t: "حلو كمعلومة عامة.", scores: { cs: 1 } }, { t: "مليش فيه.", scores: { civil: 1, mech: 1 } } ] },
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (هندسة الميكاترونكس)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { mech: 3, power: 2 } }, { t: "حلو كمعلومة عامة.", scores: { cs: 1, telecom: 1 } }, { t: "مليش فيه.", scores: { civil: 1, arch: 1 } } ] },
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (إدارة الجودة الشاملة QC)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { mech: 2, textile: 2 } }, { t: "حلو كمعلومة عامة.", scores: { civil: 1, power: 1 } }, { t: "مليش فيه.", scores: { cs: 2, arch: 2 } } ] },
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (تكنولوجيا النانو)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { mech: 2, textile: 2, civil: 1 } }, { t: "حلو كمعلومة عامة.", scores: { telecom: 1, cs: 1 } }, { t: "مليش فيه.", scores: { arch: 1 } } ] },
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (الأنظمة الخبيرة Expert Systems)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { cs: 3 } }, { t: "حلو كمعلومة عامة.", scores: { telecom: 1 } }, { t: "مليش فيه.", scores: { civil: 1, mech: 1 } } ] },
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (تصميم شبكات الصرف والميه)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { civil: 3 } }, { t: "حلو كمعلومة عامة.", scores: { mech: 1 } }, { t: "مليش فيه.", scores: { cs: 1, telecom: 1, arch: 1 } } ] },
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (تصميم الإضاءة واللاندسكيب)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { arch: 3 } }, { t: "حلو كمعلومة عامة.", scores: { civil: 1, power: 1 } }, { t: "مليش فيه.", scores: { cs: 1, mech: 1 } } ] },
+            { q: "[سؤال في العظم] إيه مدى رغبتك في دراسة: (محركات العربيات الكهربائية)؟", options: [ { t: "نفسي جداً، ده المستقبل.", scores: { power: 3, telecom: 1 } }, { t: "حلو كمعلومة عامة.", scores: { mech: 2 } }, { t: "مليش فيه.", scores: { civil: 1, arch: 1 } } ] },
+            { q: "[المقصلة] لو هتقضي الـ 5 سنين الجايين بتدرس حاجة واحدة بس، تختار إيه؟", options: [ { t: "سوفتوير، أكواد، وداتا.", scores: { cs: 3 } }, { t: "دوائر، إشارات، وكنترول.", scores: { telecom: 3, power: 2 } }, { t: "خرسانة، مباني، وشغل مواقع.", scores: { civil: 3, arch: 2 } }, { t: "مواتير، ديناميكا، ومعادن.", scores: { mech: 3, textile: 1 } } ] },
+            { q: "[المقصلة] إيه رأيك في حوار (الخطأ الهندسي)؟", options: [ { t: "عادي، أصلحه في دقيقة وأعمل Update للكود وخلاص.", scores: { cs: 3 } }, { t: "هيكلفنا شوية عشان هنضطر نغير بوردة أو سينسور.", scores: { telecom: 2, power: 2 } }, { t: "كارثة! ممكن عمارة تقع والناس تموت، الحسابات مفيهاش هزار.", scores: { civil: 3, mech: 2 } } ] },
+            { q: "[المقصلة] بتحب تتعامل مع إيه أكتر؟", options: [ { t: "المايكرو: حاجات دقيقة مبنشوفهاش بالعين زي الإشارات والبيانات.", scores: { cs: 3, telecom: 3 } }, { t: "الماكرو: حاجات ضخمة وملموسة زي الكباري والمصانع.", scores: { civil: 3, mech: 3, power: 2 } } ] },
+            { q: "[المقصلة] إحساسك إيه تجاه مادة (الرسم التجميعي Assembly Drawing)؟", options: [ { t: "بستمتع وأنا بتخيل التروس هتركب في بعض إزاي.", scores: { mech: 3 } }, { t: "خنيقة، أنا بحب التفكير المنطقي مش التخيل الميكانيكي.", scores: { cs: 2, telecom: 1 } }, { t: "عادية، الرسم الإنشائي والعمارات أحلى.", scores: { civil: 2, arch: 2 } } ] },
+            { q: "[المقصلة] سطر الكود (Code) بيمثلك إيه؟", options: [ { t: "حياتي وأكل عيشي ومستقبلي كله.", scores: { cs: 3 } }, { t: "مجرد وسيلة ببرمج بيها حتة حديدة أو هاردوير (Embedded).", scores: { telecom: 3, power: 2 } }, { t: "كورس خدته في الكلية ويا رب ما أشوفه تاني.", scores: { civil: 3, arch: 3, mech: 2 } } ] },
+            { q: "[المقصلة] هل بتعرف تتخيل الأشكال 3D في الفراغ بسهولة؟", options: [ { t: "أه جداً، بتخيل العمارة أو المكنة من كل الزوايا في دماغي.", scores: { arch: 3, mech: 2 } }, { t: "نص نص، بتمشي الحال.", scores: { civil: 2, power: 1 } }, { t: "ضعيف جداً فيها، أنا بتاع تفكير تسلسلي مش تخيل.", scores: { cs: 3, telecom: 2 } } ] },
+            { q: "[المقصلة] إيه أكتر حاجة بتخاف منها في مستقبلك؟", options: [ { t: "أشتغل شغلانة روتينية مفيهاش تشغيل دماغ وإبداع.", scores: { cs: 3, arch: 2 } }, { t: "التكنولوجيا تسبقني وألاقي نفسي مش مطلوب في السوق.", scores: { telecom: 3, power: 2, civil: 2 } }, { t: "إني أضطر أنزل مواقع واتبهدل في الشمس والتراب.", scores: { cs: 2, arch: 2, telecom: 1 } } ] },
+            { q: "[سؤال أخير] جاهز تشوف النتيجة وتتوكل على الله؟", options: [ { t: "أه يا سيدي، هات الخلاصة وربنا يقدم اللي فيه الخير. 🙏", scores: { cs: 1, telecom: 1, power: 1, mech: 1, civil: 1, arch: 1, textile: 1 } } ] }
         ];
 
         let activeQuestions = [];
@@ -332,9 +290,9 @@
         function startQuiz(mode) {
             window.scrollTo(0, 0);
             if (mode === 'normal') {
-                activeQuestions = allQuestions.slice(0, 50); // أول 50 سؤال
+                activeQuestions = allQuestions.slice(0, 50); 
             } else {
-                activeQuestions = allQuestions; // الـ 100 سؤال كاملين
+                activeQuestions = allQuestions; 
             }
 
             userAnswers = Array.from({ length: activeQuestions.length }, () => []);
@@ -360,9 +318,9 @@
                 optionsContainer.appendChild(btn);
             });
 
-            // زر ولا حاجة
-            const noneBtn = createOptionButton("ولا حاجة من دول", 'none', currentAnswers.includes('none'));
-            noneBtn.classList.add('bg-gray-50', 'text-gray-500');
+            // الزرار المصري للـ none
+            const noneBtn = createOptionButton("ولا الهوا، مفيش حاجة من دول شبهي 🤷‍♂️", 'none', currentAnswers.includes('none'));
+            noneBtn.classList.add('bg-slate-50', 'text-gray-500');
             noneBtn.onclick = () => selectOption('none', true);
             optionsContainer.appendChild(noneBtn);
 
@@ -372,10 +330,10 @@
 
         function createOptionButton(text, index, isSelected) {
             const btn = document.createElement('div');
-            btn.className = `option-btn w-full p-4 border-2 border-gray-200 rounded-xl cursor-pointer text-gray-700 font-bold flex items-center justify-between bg-white ${isSelected ? 'selected' : ''}`;
+            btn.className = `option-btn w-full p-4 border-2 border-gray-100 rounded-2xl cursor-pointer text-gray-700 font-bold flex items-center justify-between bg-white ${isSelected ? 'selected shadow-sm' : ''}`;
             
             const checkboxHTML = `
-                <div class="custom-checkbox w-6 h-6 border-2 border-gray-300 rounded flex items-center justify-center ml-4 bg-white shrink-0">
+                <div class="custom-checkbox w-6 h-6 border-2 border-gray-200 rounded-lg flex items-center justify-center ml-4 bg-white shrink-0">
                     <svg class="w-4 h-4 text-white opacity-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                 </div>
             `;
@@ -423,11 +381,11 @@
 
             if (currentAnswers.length > 0) {
                 nextBtn.disabled = false;
-                nextBtn.classList.remove('bg-gray-300', 'text-gray-500', 'cursor-not-allowed');
+                nextBtn.classList.remove('bg-gray-200', 'text-gray-400', 'cursor-not-allowed');
                 nextBtn.classList.add('bg-blue-600', 'text-white', 'hover:bg-blue-700', 'shadow-md');
             } else {
                 nextBtn.disabled = true;
-                nextBtn.classList.add('bg-gray-300', 'text-gray-500', 'cursor-not-allowed');
+                nextBtn.classList.add('bg-gray-200', 'text-gray-400', 'cursor-not-allowed');
                 nextBtn.classList.remove('bg-blue-600', 'text-white', 'hover:bg-blue-700', 'shadow-md');
             }
 
@@ -438,12 +396,12 @@
             }
 
             if (currentQuestion === activeQuestions.length - 1) {
-                nextBtn.innerHTML = 'عرض النتيجة <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>';
-                nextBtn.classList.add('bg-green-600', 'hover:bg-green-700');
+                nextBtn.innerText = 'هات الخلاصة! 🎯';
+                nextBtn.classList.add('bg-green-500', 'hover:bg-green-600');
                 nextBtn.classList.remove('bg-blue-600', 'hover:bg-blue-700');
             } else {
-                nextBtn.innerHTML = 'التالي <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>';
-                nextBtn.classList.remove('bg-green-600', 'hover:bg-green-700');
+                nextBtn.innerText = 'خش ع اللي بعده';
+                nextBtn.classList.remove('bg-green-500', 'hover:bg-green-600');
             }
         }
 
@@ -502,10 +460,10 @@
             
             if (userScores[sortedDepts[0]] === 0) {
                 resultsContainer.innerHTML = `
-                    <div class="p-8 bg-red-50 text-red-700 rounded-2xl text-center border-2 border-red-100">
-                        <svg class="w-16 h-16 mx-auto mb-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-                        <h3 class="font-bold text-xl mb-2">نتيجة غير مكتملة!</h3>
-                        <p>يبدو أنك أجبت بـ "ولا حاجة من دول" على جميع الأسئلة. حاول إعادة الاختبار والبحث عن أقرب الإجابات لشخصيتك.</p>
+                    <div class="p-8 bg-red-50 text-red-700 rounded-2xl text-center border border-red-100">
+                        <div class="text-6xl mb-4">🤦‍♂️</div>
+                        <h3 class="font-bold text-xl mb-2">إنت دوست "ولا الهوا" في كله؟!</h3>
+                        <p>يا هندسة إنت كده مش مدينا أي داتا نحللها.. جرب تاني وجاوب حتى لو بالإحساس.</p>
                     </div>
                 `;
                 return;
@@ -520,25 +478,25 @@
                 const percent = Math.round((score / maxScore) * 100);
 
                 const itemHTML = `
-                    <div class="bg-white border-2 ${i===0 ? dept.border : 'border-gray-100'} rounded-2xl p-6 shadow-sm relative overflow-hidden transition-all hover:shadow-md">
-                        ${i === 0 ? '<div class="absolute top-0 right-0 bg-yellow-400 text-yellow-900 text-xs font-bold px-4 py-1.5 rounded-bl-xl shadow-sm">الأنسب لك 🔥</div>' : ''}
+                    <div class="bg-white border-2 ${i===0 ? dept.border : 'border-gray-100'} rounded-2xl p-5 relative overflow-hidden transition-all">
+                        ${i === 0 ? '<div class="absolute top-0 right-0 bg-yellow-400 text-yellow-900 text-xs font-bold px-4 py-1 rounded-bl-xl">لايق عليك جداً 👑</div>' : ''}
                         
-                        <div class="flex items-center mb-4 mt-2">
-                            <div class="w-12 h-12 rounded-xl flex items-center justify-center ${dept.color} text-white shadow-md ml-4 shrink-0">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="${dept.icon}"></path></svg>
+                        <div class="flex items-center mb-3 mt-2">
+                            <div class="text-3xl ml-3 shrink-0">
+                                ${dept.emoji}
                             </div>
                             <div class="flex-grow">
-                                <h3 class="text-xl sm:text-2xl font-bold text-gray-800">
+                                <h3 class="text-xl font-bold text-gray-800">
                                     ${dept.name}
                                 </h3>
                             </div>
-                            <div class="text-xl sm:text-2xl font-extrabold ${i===0 ? 'text-blue-600' : 'text-gray-400'}">
+                            <div class="text-xl font-extrabold ${i===0 ? 'text-blue-600' : 'text-gray-400'}">
                                 ${percent}%
                             </div>
                         </div>
                         
-                        <div class="w-full bg-gray-100 rounded-full h-3 mt-4 overflow-hidden shadow-inner">
-                            <div class="${dept.color} h-3 rounded-full transition-all duration-1000 ease-out" style="width: 0%" data-target="${percent}%"></div>
+                        <div class="w-full bg-gray-100 rounded-full h-2.5 mt-2 overflow-hidden">
+                            <div class="${dept.color} h-2.5 rounded-full transition-all duration-1000 ease-out" style="width: 0%" data-target="${percent}%"></div>
                         </div>
                     </div>
                 `;
